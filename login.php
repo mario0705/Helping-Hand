@@ -7,6 +7,20 @@ sec_session_start();
 <?php
 include("head.php")
 ?>
+<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD8CL1dFLxhBjt70t2q5k30fj3yZqHfe8w",
+    authDomain: "helping-hand-1.firebaseapp.com",
+    databaseURL: "https://helping-hand-1.firebaseio.com",
+    projectId: "helping-hand-1",
+    storageBucket: "helping-hand-1.appspot.com",
+    messagingSenderId: "172378495367"
+  };
+  firebase.initializeApp(config);
+</script>
+  <script src="index.js"></script>
 <script type="text/JavaScript" src="js/sha512.js"></script>
 <script type="text/JavaScript" src="js/forms.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,15 +75,13 @@ color: #4f4f4f; }
             
             <?php echo '<p class="blue-text">Round</p>'; ?>
             <!--Body-->
-            <form action="includes/process_login.php" method="post" name="login_form">
+        
               <div class="md-form ">
-                <input type="text" id="email" class="form-control" type="text" name="email">
+                <input type="text" id="email_field" class="form-control" type="text" name="email">
                 <label for="Form-email3">Your email</label>
               </div>
               <div class="md-form pb-1 pb-md-3">
-                <input type="password" class="form-control"  type="password"
-                name="password"
-                id="password">
+                <input type="password" class="form-control" name="password" id="password_field">
                 <label for="Form-pass3">Your password</label>
                 
               </div>
@@ -78,10 +90,15 @@ color: #4f4f4f; }
                 <!--Grid column-->
                 <div class="col-md-1 col-md-5 d-flex align-items-start">
                   <div class="text-center">
-                    <button type="button" class="btn btn-grey btn-primary z-depth-1a "  onclick="formhash(this.form, this.form.password)" >Log in</button>
+                    <button type="button" class="btn btn-grey btn-primary z-depth-1a "  onclick="login()" >Log in</button>
                   </div>
                 </div>
-              </form>
+    
+              <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
               <!--Grid column-->
               <!--Grid column-->
               <div class="col-md-7">
