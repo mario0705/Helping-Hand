@@ -7,10 +7,7 @@ $logged = 'in';
 } else {
 $logged = 'out';
 }
-$stmt = $mysqli->prepare("SELECT round FROM round WHERE id ='0'");
-$stmt->execute();
-$stmt->bind_result($round);
-$stmt->fetch();
+
 ?>
 <?php
 include("head.php")
@@ -67,7 +64,7 @@ color: #4f4f4f; }
           <!--Header-->
           <div class="card-body mx-5 mt-5">
             
-            <?php echo '<p class="blue-text">Round ' . $round . '   </p>'; ?>
+            
             <!--Body-->
             <form action="includes/process_login.php" method="post" name="login_form">
               <div class="md-form ">
