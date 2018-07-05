@@ -24,7 +24,7 @@ function formhash(form, password) {
 <html>
 
 <body>
-<form action="../includes/process_login_get.php" method="get">
+<form action="../includes/process_login_get.php" method="POST" name="login_form">
 	<input type="text" id="email" class="form-control" name="email">
  <input type="password" class="form-control" name="password" id="password">
  <button onclick="formhash(this.form, this.form.password)">hello</button> 
