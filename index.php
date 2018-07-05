@@ -56,18 +56,19 @@ include("head.php")
 </head>
 <body>
 
+
 <div class="swiper-container">
-<div class="swiper-wrapper">
-<div class="swiper-slide"><img src="./assets/image/1.jpg"></div>
-<div class="swiper-slide"><img src="./assets/image/1.jpg"></div>
-<div class="swiper-slide"><img src="./assets/image/1.jpg"></div>
-<div class="swiper-slide"><img src="./assets/image/1.jpg"></div>
-<div class="swiper-slide"><img src="./assets/image/1.jpg"></div>
-<div class="swiper-slide"><img src="./assets/image/1.jpg"></div>
-<div class="swiper-slide"><img src="./assets/image/1.jpg"></div>
-<div class="swiper-slide"><img src="./assets/image/1.jpg"></div>
-<div class="swiper-slide"><img src="./assets/image/1.jpg"></div>
-<div class="swiper-slide"><img src="./assets/image/1.jpg"></div>
+<div class="swiper-wrapper" style="width: 50%;">
+<div class="swiper-slide"><img src="./assets/image/1.jpg" style="width: inherit;"></div>
+<div class="swiper-slide"><img src="./assets/image/2.jpg" style="width: inherit;"></div>
+<div class="swiper-slide"><img src="./assets/image/3.jpg" style="width: inherit;"></div>
+<div class="swiper-slide"><img src="./assets/image/4.jpg" style="width: inherit;"></div>
+<div class="swiper-slide"><img src="./assets/image/5.jpg" style="width: inherit;"></div>
+<div class="swiper-slide"><img src="./assets/image/6.jpg" style="width: inherit;"></div>
+<div class="swiper-slide"><img src="./assets/image/7.jpg" style="width: inherit;"></div>
+<div class="swiper-slide"><img src="./assets/image/8.jpg" style="width: inherit;"></div>
+<div class="swiper-slide"><img src="./assets/image/9.jpg" style="width: inherit;"></div>
+<div class="swiper-slide"><img src="./assets/image/10.jpg" style="width: inherit;"></div>
 </div>
 
 <div class="swiper-pagination"></div>
