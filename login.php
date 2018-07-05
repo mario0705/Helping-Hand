@@ -71,13 +71,11 @@ color: #4f4f4f; }
             <!--Body-->
             <form action="includes/process_login.php" method="post" name="login_form">
               <div class="md-form ">
-                <input type="text" id="email" class="form-control" type="text" name="email">
+                <input type="text" id="email" class="form-control" name="email">
                 <label for="Form-email3">Your email</label>
               </div>
               <div class="md-form pb-1 pb-md-3">
-                <input type="password" class="form-control"  type="password"
-                name="password"
-                id="password">
+                <input type="password" class="form-control" name="password" id="password">
                 <label for="Form-pass3">Your password</label>
                 
               </div>

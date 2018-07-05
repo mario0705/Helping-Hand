@@ -24,7 +24,7 @@ include("head.php")
             <!--Card image-->
             <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
                 
-<link rel="stylesheet" href="http://idangero.us/swiper/dist/css/swiper.min.css">
+<link rel="stylesheet" href="https://idangero.us/swiper/dist/css/swiper.min.css">
 
 <style>
     
@@ -77,7 +77,7 @@ include("head.php")
 <div class="swiper-button-prev"></div>
 </div>
 
-<script src="http://idangero.us/swiper/dist/js/swiper.min.js"></script>
+<script src="https://idangero.us/swiper/dist/js/swiper.min.js"></script>
 
 <script>
     var swiper = new Swiper('.swiper-container', {
