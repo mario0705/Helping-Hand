@@ -11,12 +11,12 @@
 // define("SECURE", FALSE);    // FOR DEVELOPMENT ONLY!!!!
   
 define("HOST", "helpinghand-mysqldbserver.mysql.database.azure.com");     // The host you want to connect to.
-define("USER", "mysqldbuser@helpinghand-mysqldbserver");    // The database username. 
-define("PASSWORD", "rootme2312!");    // The database password. 
-define("DATABASE", "accounts");    // The database name.
+define("USER", "sec_user@helpinghand-mysqldbserver");    // The database username. 
+define("PASSWORD", "12345");    // The database password. 
+define("DATABASE", "secure_login");    // The database name.
  
 define("CAN_REGISTER", "any");
 define("DEFAULT_ROLE", "member");
  
-define("SECURE", TRUE);     // FOR DEVELOPMENT ONLY!!!!
+define("SECURE", FALSE);     // FOR DEVELOPMENT ONLY!!!!
 ?>

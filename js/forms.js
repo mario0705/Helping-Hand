@@ -17,7 +17,7 @@ function formhash(form, password) {
  
 function regformhash(form, uid, email, password, conf) {
      // Check each field has a value
-    if (uname.value == '' ||
+    if (teamname.value == '' ||
         mobile.value == ''         || 
           email.value == ''     || 
           password.value == ''  || 
@@ -30,9 +30,9 @@ function regformhash(form, uid, email, password, conf) {
     // Check the username
  
     re = /^\w+$/; 
-    if(!re.test(form.uname.value)) { 
+    if(!re.test(form.teamname.value)) { 
         alert("Userzname must contain only letters, numbers and underscores. Please try again"); 
-        form.uname.focus();
+        form.Teamname.focus();
         return false; 
     }
  

@@ -59,8 +59,8 @@ color: #4f4f4f; }
   ?>
             <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="post" name="registration_form">
               <div class="md-form ">
-                <input  id="uname" class="form-control" type="text" name="uname">
-                <label for="Form-email3">Your uname</label>
+                <input  id="teamname" class="form-control" type="text" name="teamname">
+                <label for="Form-email3">Your Teamname</label>
               </div>
               <div class="md-form ">
                 <input type="text" id="email" class="form-control" type="text" name="email">
@@ -88,7 +88,7 @@ color: #4f4f4f; }
                 <div class="col-md-1 col-md-5 d-flex align-items-start">
                   <div class="text-center">
                     <button type="button" class="btn aqua-gradient btn-primary z-depth-1a"  onclick="return regformhash(this.form,
-                    this.form.uname,
+                    this.form.teamname,
                     this.form.email,
                     this.form.password,
                     this.form.confirmpwd,
