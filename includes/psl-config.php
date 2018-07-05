@@ -18,5 +18,5 @@ define("DATABASE", "secure_login");    // The database name.
 define("CAN_REGISTER", "any");
 define("DEFAULT_ROLE", "member");
  
-define("SECURE", FALSE);     // FOR DEVELOPMENT ONLY!!!!
+define("SECURE", TRUE);     // FOR DEVELOPMENT ONLY!!!!
 ?>
