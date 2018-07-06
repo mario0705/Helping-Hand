@@ -31,7 +31,7 @@ function regformhash(form, uid, email, password, conf) {
  
     re = /^\w+$/; 
     if(!re.test(form.teamname.value)) { 
-        alert("Userzname must contain only letters, numbers and underscores. Please try again"); 
+        alert("Username must contain only letters, numbers and underscores. Please try again"); 
         form.Teamname.focus();
         return false; 
     }
