@@ -12,7 +12,7 @@ if (isset($_GET['email'], $_GET['p'])) {
                 $stmt = $mysqli->prepare("SELECT round FROM round WHERE id ='0'");
                 $stmt->execute();
                 $stmt->bind_result($round);
-                 $data=$row[0];
+                 $data=$round[0];
                  if ($data) {
                     echo $data;
                      # code...
