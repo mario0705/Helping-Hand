@@ -12,19 +12,12 @@ if (isset($_GET['email'], $_GET['p'])) {
                 $stmt = $mysqli->prepare("SELECT round FROM round WHERE id ='0'");
                 $stmt->execute();
                 $stmt->bind_result($round);
-                 $stmt->fetch();
-                 if ($round == "1") {
+                 $data=$row[0];
+                 if ($data) {
+                    echo $data;
                      # code...
-                    header('Location: ../index.php');
                  }
-                 else if ($round == "2") {
-                     # code...
-                    header('Location: ../round2/redirect.php');
-                 }
-                 else if ($round == "3") {
-                     # code...
-                    header('Location: ../round3/redirect.php');
-                 }
+                 
         
     } else {
         // Login failed 
