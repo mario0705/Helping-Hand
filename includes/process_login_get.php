@@ -10,13 +10,23 @@ if (isset($_GET['email'], $_GET['p'])) {
  
     if (login($email, $password, $mysqli) == true) {
                 $stmt = $mysqli->prepare("SELECT round FROM round WHERE id ='0'");
-                $stmt->execute();
-                $stmt->bind_result($round);
-                 $data=$round[0];
-                 if ($data) {
-                    echo $data;
-                     # code...
-                 }
+                // $stmt->execute();
+                // $stmt->bind_result($round);
+                //  $data=$round[0];
+                //  if ($data) {
+                //     echo $data;
+                //      # code...""
+                //  }
+        $stmt= mysqli->prepare("SELECT id, teamname,email,mobile FROM members where email='vraj.vup@gmail.com'")
+        $stmt->fetch();
+        $stmt->bind_result($id,$teamname,$email,$mobile)
+        $user=array();
+        $user['id']=$id;
+        $user['uname']=$teamname;
+        $user['email']=$email;
+        $user['phone']=$mobile;
+        return $user;
+
                  
         
     } else {
