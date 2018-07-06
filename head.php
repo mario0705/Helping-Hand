@@ -5,6 +5,7 @@ include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
 ?>
 <html lang="en"><head>
+    <title>Helping</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
@@ -60,7 +61,11 @@ include_once 'includes/psl-config.php';
                         <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-hand-pointer-o"></i> Instruction<i class="fa fa-angle-down rotate-icon"></i></a>
                         <div class="collapsible-body">
                             <ul class="list-unstyled">
-                                <li><a href="instruction.php" class="waves-effect">For participants</a>
+                                <li><a href="Student.php" class="waves-effect">For Student</a>
+                            </li>
+                            <li><a href="Volunteer.php" class="waves-effect">For Volunteer</a>
+                            </li>
+                            <li><a href="NGO.php" class="waves-effect">For NGO</a>
                             </li>
                             
                         </ul>
@@ -82,11 +87,17 @@ include_once 'includes/psl-config.php';
     <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-envelope-o"></i> Contact us<i class="fa fa-angle-down rotate-icon"></i></a>
     <div class="collapsible-body">
         <ul class="list-unstyled">
-            <li><div style="padding-top: 1%;">&nbsp&nbsp Aakash Bhanushali</div>
-            <li><a href="tel:8905948042" class="waves-effect">+918905948042</a>
+            <li><div style="padding-top: 1%;">&nbsp&nbsp Patel Vraj</div>
+            <li><a href="tel:9375131548" class="waves-effect">+919375131548</a>
         </li>
-        <li><div style="padding-top: 1%;">&nbsp&nbsp Mayank Patel</div>
-        <li><a href="tel:8153895063" class="waves-effect">+918153895063</a>
+        <li><div style="padding-top: 1%;">&nbsp&nbsp  Patel Namrata</div>
+        <li><a href="tel:9375131548" class="waves-effect">+919375131548</a>
+        <li><div style="padding-top: 1%;">&nbsp&nbsp  Patel Smit</div>
+        <li><a href="tel:9375131548" class="waves-effect">+919375131548</a>
+            <li><div style="padding-top: 1%;">&nbsp&nbsp  Nimavat Pinakin</div>
+                 <li><a href="tel:9375131548" class="waves-effect">+919375131548</a>
+                <li><div style="padding-top: 1%;">&nbsp&nbsp  Goswami Krishna</div>
+                     <li><a href="tel:9375131548" class="waves-effect">+919375131548</a>
     </li>
     
 </ul>
@@ -135,13 +146,9 @@ echo '<a class="dropdown-item waves-effect waves-light" href="logout.php">Logout
 }
 else{
 echo' <a class="dropdown-item waves-effect waves-light" href="login.php">Login</a>
-<a class="dropdown-item waves-effect waves-light" href="register.php">Sign Up</a>';
+<a class="dropdown-item waves-effect waves-light" href="register.php">Register</a>';
 }
 ?>
-</div>
-</li>
-</ul>
-</nav>
 <!-- /.Navbar -->
 </header>
 </body>
