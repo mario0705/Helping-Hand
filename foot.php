@@ -1,6 +1,6 @@
 <html>
     <body>
-        <footer class="page-footer text-center text-md-left pt-4">
+        <footer style="position: relative; bottom: 0px; width: 100%;" class="page-footer text-center text-md-left pt-4">
             
         </div>
     </div>
@@ -19,7 +19,7 @@
     <!--Copyright-->
     <div class="footer-copyright py-3 text-center">
         <div class="container-fluid">
-            <a href="http://spectrum.adit.ac.in/"> Spectrum'18 </a>
+            <a href="http://spectrum.adit.ac.in/"> Helping Hand </a>
         </div>
     </div>
     <!--/.Copyright-->
