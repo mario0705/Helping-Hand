@@ -68,7 +68,23 @@ if (isset($_POST['teamname'], $_POST['email'], $_POST['p'],$_POST['mobile'])) {
 
          
 
-         
+         $prep_stmt = "SELECT id FROM members WHERE mobile = ? LIMIT 1";
+    $stmt = $mysqli->prepare($prep_stmt);
+ 
+    if ($stmt) {
+        $stmt->bind_param('s', $mobile);
+        $stmt->execute();
+        $stmt->store_result();
+ 
+                if ($stmt->num_rows != 1) {
+                        // A user with this teamname already exists
+                        $error_msg .= '<p class="error">You are not registered for this event</p>';
+                        $stmt->close();
+                }
+        } else {
+                $error_msg .= '<p class="error">Database error line 55</p>';
+                $stmt->close();
+        }
  
     // TODO: 
     // We'll also have to account for the situation where the user doesn't have
@@ -85,7 +101,7 @@ if (isset($_POST['teamname'], $_POST['email'], $_POST['p'],$_POST['mobile'])) {
         //UPDATE `members` SET teamname='vraj', email= 'vraj.vup@gmail.com', password ='asdASD', levels= '2' WHERE mobile = '?';
  
         // Insert the new user into the database 
-        if ($insert_stmt = $mysqli->prepare("INSERT into members SET teamname='$teamname', email='$email', password ='$password' ,mobile ='$mobile'")) {
+        if ($insert_stmt = $mysqli->prepare("UPDATE members SET teamname='$teamname', email='$email', password ='$password' WHERE mobile ='$mobile' AND flag = '1' ")) {
             // Execute the prepared query.
             if ( $insert_stmt->execute()) {
                 

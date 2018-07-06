@@ -13,18 +13,19 @@ if (isset($_POST['email'], $_POST['p'])) {
                 $stmt->execute();
                 $stmt->bind_result($round);
                  $stmt->fetch();
-                 if ($round == "1") {
-                     # code...
-                    header('Location: ../index.php');
-                 }
-                 else if ($round == "2") {
-                     # code...
-                    header('Location: ../round2/redirect.php');
-                 }
-                 else if ($round == "3") {
-                     # code...
-                    header('Location: ../round3/redirect.php');
-                 }
+                 // if ($round == "1") {
+                 //     # code...
+                 //    header('Location: ../round1/redirect.php');
+                 // }
+                 // else if ($round == "2") {
+                 //     # code...
+                 //    header('Location: ../round2/redirect.php');
+                 // }
+                 // else if ($round == "3") {
+                 //     # code...
+                 //    header('Location: ../round3/redirect.php');
+                 // }
+                 header('Location: ../index.php');
         
     } else {
         // Login failed 
