@@ -10,21 +10,24 @@ if (isset($_GET['email'], $_GET['p'])) {
  
     if (login($email, $password, $mysqli) == true) {
                 $stmt = $mysqli->prepare("SELECT round FROM round WHERE id ='0'");
-                $stmt->execute();
-                $stmt->bind_result($round);
-                 $stmt->fetch();
-                 if ($round == "1") {
-                     # code...
-                    header('Location: ../index.php');
-                 }
-                 else if ($round == "2") {
-                     # code...
-                    header('Location: ../round2/redirect.php');
-                 }
-                 else if ($round == "3") {
-                     # code...
-                    header('Location: ../round3/redirect.php');
-                 }
+                // $stmt->execute();
+                // $stmt->bind_result($round);
+                //  $data=$round[0];
+                //  if ($data) {
+                //     echo $data;
+                //      # code...""
+                //  }
+        $stmt= mysqli->prepare("SELECT id, teamname,email,mobile FROM members where email='vraj.vup@gmail.com'")
+        $stmt->fetch();
+        $stmt->bind_result($id,$teamname,$email,$mobile)
+        $user=array();
+        $user['id']=$id;
+        $user['uname']=$teamname;
+        $user['email']=$email;
+        $user['phone']=$mobile;
+        return $user;
+
+                 
         
     } else {
         // Login failed 
