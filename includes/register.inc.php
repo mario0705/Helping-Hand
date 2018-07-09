@@ -4,7 +4,7 @@ include_once 'psl-config.php';
  
 $error_msg = "";
  
-if (isset($_POST['teamname'], $_POST['email'], $_POST['p'],$_POST['mobile'])) {
+if (isset($_POST['teamname'], $_POST['email'], $_POST['p'],$_POST['mobile'],$_POST['age'],$_POST['gender'])) {
     // Sanitize and validate the data passed in
     $teamname = filter_input(INPUT_POST, 'teamname', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -22,7 +22,8 @@ if (isset($_POST['teamname'], $_POST['email'], $_POST['p'],$_POST['mobile'])) {
     }
 
     $mobile = filter_input(INPUT_POST, 'mobile', FILTER_SANITIZE_STRING);
-     
+    $age = filter_input(INPUT_POST, 'age', FILTER_SANITIZE_STRING);
+     $gender = filter_input(INPUT_POST, 'gender', FILTER_SANITIZE_STRING);
     // teamname validity and password validity have been checked client side.
     // This should should be adequate as nobody gains any advantage from
     // breaking these rules.
@@ -85,7 +86,7 @@ if (isset($_POST['teamname'], $_POST['email'], $_POST['p'],$_POST['mobile'])) {
         //UPDATE `members` SET teamname='vraj', email= 'vraj.vup@gmail.com', password ='asdASD', levels= '2' WHERE mobile = '?';
  
         // Insert the new user into the database 
-        if ($insert_stmt = $mysqli->prepare("INSERT into members SET teamname='$teamname', email='$email', password ='$password' ,mobile ='$mobile'")) {
+        if ($insert_stmt = $mysqli->prepare("INSERT into members SET teamname='$teamname', email='$email', password ='$password' ,mobile ='$mobile', age='$age', gender='$gender'")) {
             // Execute the prepared query.
             if ( $insert_stmt->execute()) {
                 
