@@ -82,6 +82,36 @@ color: #4f4f4f; }
                 <input type="text" id="mobile" class="form-control"  name="mobile">
                 <label for="Form-email3">Your mobile</label>
               </div>
+              <div class="md-form ">
+                <input type="text" id="age" class="form-control"  name="age">
+                <label for="age">Your Age</label>
+              </div>
+              <!-- Form inline with radios -->
+              <div class="form-inline">
+
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="exampleRadiosInline1" value="NGO" checked>
+        <label class="form-check-label" for="exampleRadiosInline1">
+            NGO
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="exampleRadiosInline2" value="Male">
+        <label class="form-check-label" for="exampleRadiosInline2">
+            Male
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="exampleRadiosInline3" value="Female">
+        <label class="form-check-label" for="exampleRadiosInline3">
+            Female
+        </label>
+    </div>
+
+</div>
+
+<!-- Form inline with radios -->
               <!--Grid row-->
               <div class="row d-flex align-items-center mb-4">
                 <!--Grid column-->
@@ -92,7 +122,8 @@ color: #4f4f4f; }
                     this.form.email,
                     this.form.password,
                     this.form.confirmpwd,
-                    this.form.mobile);">Signup</button>
+                    this.form.mobile,
+                    this.form.age);">Signup</button>
                   </div>
                 </div>
               </form>

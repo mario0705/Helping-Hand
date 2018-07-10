@@ -15,13 +15,14 @@ function formhash(form, password) {
     form.submit();
 }
  
-function regformhash(form, uid, email, password, conf) {
+function regformhash(form, uid, email, password, conf,age) {
      // Check each field has a value
     if (teamname.value == '' ||
         mobile.value == ''         || 
           email.value == ''     || 
           password.value == ''  || 
-          conf.value == '' ) {
+          conf.value == '' ||
+          age.value == '' ) {
  
         alert('You must provide all the requested details. Please try again');
         return false;
@@ -58,6 +59,11 @@ function regformhash(form, uid, email, password, conf) {
     if (password.value != conf.value) {
         alert('Your password and confirmation do not match. Please try again');
         form.password.focus();
+        return false;
+    }
+    if (age.value < 18 || age.value>80) {
+        alert('Sorry you cannot register');
+        form.age.focus();
         return false;
     }
  

@@ -13,7 +13,7 @@ include_once 'includes/psl-config.php';
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
     <link href="2/bootstrap.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
@@ -121,7 +121,7 @@ include_once 'includes/psl-config.php';
 </div>
 <!-- Breadcrumb-->
 <div class="breadcrumb-dn mr-auto">
-<p><a href="index.php">MindSpark</a></p>
+<p><a href="index.php">Helping Hand</a></p>
 </div>
 <ul class="nav navbar-nav nav-flex-icons ml-auto">
 <li class="nav-item">
