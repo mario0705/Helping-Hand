@@ -61,11 +61,11 @@ function regformhash(form, uid, email, password, conf,age) {
         form.password.focus();
         return false;
     }
-    if (age.value < 18 || age.value>80) {
-        alert('Sorry you cannot register');
-        form.age.focus();
-        return false;
-    }
+    // if (age.value <= 18 || age.value >=80) {
+    //     alert('Sorry you cannot register');
+    //     form.age.focus();
+    //     return false;
+    // }
  
     // Create a new element input, this will be our hashed password field. 
     var p = document.createElement("input");
