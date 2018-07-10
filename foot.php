@@ -10,8 +10,8 @@
     <!--Social buttons-->
     <div class="social-section text-center">
         <ul class="list-unstyled list-inline">
-            <li class="list-inline-item"><a href="https://www.facebook.com/spectrumadit/" class="btn-floating btn-fb waves-effect waves-light"><i class="fa fa-facebook"> </i></a></li>
-            <li class="list-inline-item"><a href="https://www.instagram.com/spectrumadit/" class="btn-floating btn-gplus waves-effect waves-light"><i class="fa fa-instagram"> </i></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/spectrumadit/" class="btn-floating btn-fb waves-effect waves-light"><i class="fab fa-facebook"> </i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/spectrumadit/" class="btn-floating btn-gplus waves-effect waves-light"><i class="fab fa-instagram"> </i></a></li>
             
         </ul>
     </div>
