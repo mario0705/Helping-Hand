@@ -82,11 +82,11 @@ include_once 'includes/psl-config.php';
     <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-envelope-o"></i> Contact us<i class="fa fa-angle-down rotate-icon"></i></a>
     <div class="collapsible-body">
         <ul class="list-unstyled">
-            <li><div style="padding-top: 1%;">&nbsp&nbsp Aakash Bhanushali</div>
+            <li><div style="padding-top: 1%;">&nbsp&nbsp Vraj Patel</div>
             <li><a href="tel:8905948042" class="waves-effect">+918905948042</a>
         </li>
-        <li><div style="padding-top: 1%;">&nbsp&nbsp Mayank Patel</div>
-        <li><a href="tel:8153895063" class="waves-effect">+918153895063</a>
+        <li><div style="padding-top: 1%;">&nbsp&nbsp Smit Patel</div>
+        <li><a href="tel:8153895063" class="waves-effect">+919408599538</a>
     </li>
     
 </ul>
@@ -98,6 +98,18 @@ include_once 'includes/psl-config.php';
 </ul>
 </li>
 <!--/. Side navigation links -->
+</ul>
+<ul>
+    <a href="first_stu.php" style="color: white;">Field select</a>
+</ul>
+<ul>
+    <a href="choicefilling.php" style="color: white;">Who are you?</a>
+</ul>
+<ul>
+    <a href="about_us.php" style="color: white;">About us</a>
+</ul>
+<ul>
+    <a href="join_us.php" style="color: white;">Join us</a>
 </ul>
 <div class="sidenav-bg mask-strong"></div>
 </div>
