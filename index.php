@@ -65,10 +65,10 @@ include("head.php")
 <div class="swiper-slide"><img src="./assets/image/4.jpg" style="width: inherit;"></div>
 <div class="swiper-slide"><img src="./assets/image/5.jpg" style="width: inherit;"></div>
 <div class="swiper-slide"><img src="./assets/image/6.jpg" style="width: inherit;"></div>
-<div class="swiper-slide"><img src="./assets/image/7.jpg" style="width: inherit;"></div>
+<!-- <div class="swiper-slide"><img src="./assets/image/7.jpg" style="width: inherit;"></div>
 <div class="swiper-slide"><img src="./assets/image/8.jpg" style="width: inherit;"></div>
 <div class="swiper-slide"><img src="./assets/image/9.jpg" style="width: inherit;"></div>
-<div class="swiper-slide"><img src="./assets/image/10.jpg" style="width: inherit;"></div>
+<div class="swiper-slide"><img src="./assets/image/10.jpg" style="width: inherit;"></div> -->
 </div>
 
 <div class="swiper-pagination"></div>
