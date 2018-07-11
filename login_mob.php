@@ -41,11 +41,15 @@ if (isset($_POST['email'], $_POST['pass'])) {
         
     } else {
         // Login failed 
-        header('Location: ../index.php?error=1');
+        $response["error"] = TRUE;
+        $response["error_msg"] = "Login credentials are wrong. Please try again!";
+        echo json_encode($response);
     }
 } else {
     // The correct POST variables were not sent to this page. 
-    echo 'Invalid Request';
+    $response["error"] = TRUE;
+        $response["error_msg"] = "Login credentials are wrong. Please try again!";
+        echo json_encode($response);
 }
 
 ?>
