@@ -79,31 +79,31 @@ function login($email, $password, $mysqli) {
     }
 }
 
-// function checkbrute($user_id, $mysqli) {
-//     // Get timestamp of current time 
-//     $now = time();
+function checkbrute($user_id, $mysqli) {
+    // Get timestamp of current time 
+    $now = time();
  
-//     // All login attempts are counted from the past 2 hours. 
-//     $valid_attempts = $now - (2 * 60 * 60);
+    // All login attempts are counted from the past 2 hours. 
+    $valid_attempts = $now - (2 * 60 * 60);
  
-//     if ($stmt = $mysqli->prepare("SELECT time 
-//                              FROM login_attempts 
-//                              WHERE user_id = ? 
-//                             AND time > '$valid_attempts'")) {
-//         $stmt->bind_param('i', $user_id);
+    if ($stmt = $mysqli->prepare("SELECT time 
+                             FROM login_attempts 
+                             WHERE user_id = ? 
+                            AND time > '$valid_attempts'")) {
+        $stmt->bind_param('i', $user_id);
  
-//         // Execute the prepared query. 
-//         $stmt->execute();
-//         $stmt->store_result();
+        // Execute the prepared query. 
+        $stmt->execute();
+        $stmt->store_result();
  
-//         // If there have been more than 5 failed logins 
-//         if ($stmt->num_rows > 5) {
-//             return true;
-//         } else {
-//             return false;
-//         }
-//     }
-// }
+        // If there have been more than 5 failed logins 
+        if ($stmt->num_rows > 5) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
 
 function login_check($mysqli) {
     // Check if all session variables are set 
