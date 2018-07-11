@@ -1,14 +1,14 @@
 <?php
-include_once 'includes/db_connect.php';
-include_once 'includes/functions.php';
+include_once 'db_connect.php';
+include_once 'functions.php';
  
 sec_session_start(); // Our custom secure way of starting a PHP session.
  
 
-if (isset($_POST['name'], $_POST['email'], $_POST['pass'],$_POST['age'],$_POST['gender'])) 
+if (isset($_POST['teamname'], $_POST['email'], $_POST['pass'],$_POST['age'],$_POST['gender'])) 
 {
     // Sanitize and validate the data passed in
-    $teamname = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $teamname = filter_input(INPUT_POST, 'teamname', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $email = filter_var($email, FILTER_VALIDATE_EMAIL);
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -17,12 +17,14 @@ if (isset($_POST['name'], $_POST['email'], $_POST['pass'],$_POST['age'],$_POST['
     }
  
     $pass = filter_input(INPUT_POST, 'pass', FILTER_SANITIZE_STRING);
+    $password = hash('sha512', $pass);
+    
     if (strlen($password) != 128) {
         // The hashed pwd should be 128 characters long.
         // If it's not, something really odd has happened
         $error_msg .= '<p class="error">Invalid password configuration.</p>';
     }
-    $password = hash('sha512', $pass);
+    
    // $mobile = filter_input(INPUT_POST, 'mobile', FILTER_SANITIZE_STRING);
     $age = filter_input(INPUT_POST, 'age', FILTER_SANITIZE_STRING);
      $gender = filter_input(INPUT_POST, 'gender', FILTER_SANITIZE_STRING);
