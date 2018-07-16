@@ -1,6 +1,6 @@
 <html>
     <body>
-        <footer style="position: relative; bottom: 0px; width: 100%;" class="page-footer text-center text-md-left pt-4">
+        <footer style="position: fixed; bottom: 0px; width: 100%;" class="page-footer text-center text-md-left pt-4">
             
         </div>
     </div>
