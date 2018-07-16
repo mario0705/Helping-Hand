@@ -1,28 +1,12 @@
-function formhash(form, password) {
-    // Create a new element input, this will be our hashed password field. 
-    var p = document.createElement("input");
- 
-    // Add the new element to our form. 
-    form.appendChild(p);
-    p.name = "p";
-    p.type = "hidden";
-    p.value = hex_sha512(password.value);
- 
-    // Make sure the plaintext password doesn't get sent. 
-    password.value = "";
- 
-    // Finally submit the form. 
-    form.submit();
-}
- 
-function regformhash(form, uid, email, password, conf,age) {
+function regformhashngo(form, uid, phone, email, password, confirmpwd,mobile,address) {
      // Check each field has a value
-    if (teamname.value == '' ||
-        mobile.value == ''         || 
+    if (ngoname.value == '' ||
+        coordinator.value == '' ||
           email.value == ''     || 
           password.value == ''  || 
-          conf.value == '' ||
-          age.value == '' ) {
+          confirmpwd.value == '' ||
+          mobile.value == ''         || 
+          address.value == '' ) {
  
         alert('You must provide all the requested details. Please try again');
         return false;
@@ -31,7 +15,7 @@ function regformhash(form, uid, email, password, conf,age) {
     // Check the username
  
     re = /^\w+$/; 
-    if(!re.test(form.teamname.value)) { 
+    if(!re.test(form.ngoname.value)) { 
         alert("Username must contain only letters, numbers and underscores. Please try again"); 
         form.Teamname.focus();
         return false; 
@@ -56,7 +40,7 @@ function regformhash(form, uid, email, password, conf,age) {
     }
  
     // Check password and confirmation are the same
-    if (password.value != conf.value) {
+    if (password.value != confirmpwd.value) {
         alert('Your password and confirmation do not match. Please try again');
         form.password.focus();
         return false;
@@ -78,7 +62,7 @@ function regformhash(form, uid, email, password, conf,age) {
  
     // Make sure the plaintext password doesn't get sent. 
     password.value = "";
-    conf.value = "";
+    confirmpwd.value = "";
  
     // Finally submit the form. 
     form.submit();

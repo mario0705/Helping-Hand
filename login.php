@@ -69,7 +69,7 @@ color: #4f4f4f; }
             
             <?php echo '<p class="blue-text">Round ' . $round . '   </p>'; ?>
             <!--Body-->
-            <form action="includes/process_login_mobile.php" method="post" name="login_form">
+            <form action="includes/process_login.php" method="post" name="login_form">
               <div class="md-form ">
                 <input type="text" id="email" class="form-control" name="email">
                 <label for="Form-email3">Your email</label>

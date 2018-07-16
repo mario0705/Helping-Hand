@@ -13,7 +13,15 @@ include("head.php")
 ?>
 <script type="text/JavaScript" src="js/sha512.js"></script>
 <script type="text/JavaScript" src="js/forms.js"></script>
+<script type="text/JavaScript" src="js/forms2.js"></script>
 <style type="text/css">
+#ngo
+{
+  display: none;
+}
+#user{
+  display: none;
+}
 .form-gradient .font-small {
 font-size: 0.8rem; }
 .form-gradient .header {
@@ -50,52 +58,56 @@ color: #4f4f4f; }
             </div>
             
           </div>
-          <!--Header-->
           <div class="card-body mx-5 mt-5">
+              <!-- Default inline 1-->
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample" onclick="document.getElementById('ngo').style.display = 'none';document.getElementById('user').style.display = 'block'">
+  <label class="custom-control-label" for="defaultInline1">Volunteer/Student</label>
+</div>
+
+<!-- Default inline 2-->
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample" onclick="document.getElementById('ngo').style.display = 'block';document.getElementById('user').style.display = 'none'">
+  <label class="custom-control-label" for="defaultInline2">NGO</label>
+</div>
+          </div>
+          <div class="card-body mx-8 mt-5" id="user">
             <?php
   if (!empty($error_msg)) {
   echo $error_msg;
   }
   ?>
-            <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="post" name="registration_form">
+
+            <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="post" name="registration_form" >
               <div class="md-form ">
-                <input  id="teamname" class="form-control" type="text" name="teamname">
-                <label for="Form-email3">Your Teamname</label>
+                <input   class="form-control" type="text" name="teamname">
+                <label for="Form-email3">Your Name</label>
               </div>
               <div class="md-form ">
-                <input type="text" id="email" class="form-control" type="text" name="email">
+                <input type="text"  class="form-control" type="text" name="email">
                 <label for="Form-email3">Your email</label>
               </div>
               <div class="md-form pb-1 pb-md-3">
                 <input type="password" class="form-control"  type="password"
-                name="password"
-                id="password">
+                name="password">
                 <label for="Form-pass3">Your password</label>
                 
               </div>
               <div class="md-form pb-1 pb-md-3">
-                <input type="password" class="form-control" name="confirmpwd" id="confirmpwd">
+                <input type="password" class="form-control" name="confirmpwd">
                 <label for="Form-pass3">Confirm password</label>
                 
               </div>
               <div class="md-form ">
-                <input type="text" id="mobile" class="form-control"  name="mobile">
+                <input type="text" class="form-control"  name="mobile">
                 <label for="Form-email3">Your mobile</label>
               </div>
               <div class="md-form ">
-                <input type="text" id="age" class="form-control"  name="age">
+                <input type="text"  class="form-control"  name="age">
                 <label for="age">Your Age</label>
               </div>
               <!-- Form inline with radios -->
               <div class="form-inline">
-
-
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="gender" id="exampleRadiosInline1" value="NGO" checked>
-        <label class="form-check-label" for="exampleRadiosInline1">
-            NGO
-        </label>
-    </div>
     <div class="form-check">
         <input class="form-check-input" type="radio" name="gender" id="exampleRadiosInline2" value="Male">
         <label class="form-check-label" for="exampleRadiosInline2">
@@ -108,25 +120,20 @@ color: #4f4f4f; }
             Female
         </label>
     </div>
-
-</div>
-
-<!-- Form inline with radios -->
-              <!--Grid row-->
-              <div class="row d-flex align-items-center mb-4">
-                <!--Grid column-->
-                <div class="col-md-1 col-md-5 d-flex align-items-start">
-                  <div class="text-center">
-                    <button type="button" class="btn aqua-gradient btn-primary z-depth-1a"  onclick="return regformhash(this.form,
+    <br>
+      <button type="button" class="btn aqua-gradient btn-primary z-depth-1a"  onclick="return regformhash(this.form,
                     this.form.teamname,
                     this.form.email,
                     this.form.password,
                     this.form.confirmpwd,
                     this.form.mobile,
                     this.form.age);">Signup</button>
-                  </div>
-                </div>
-              </form>
+</div>
+</form>
+
+
+
+
               <!--Grid column-->
               <!--Grid column-->
               
@@ -136,7 +143,120 @@ color: #4f4f4f; }
               </div>
               <!--Grid column-->
             </div>
-            <!--Grid row-->
+
+
+
+
+
+
+
+
+
+
+<div class="card-body mx-8 mt-5" id="ngo">
+            <?php
+  if (!empty($error_msg)) {
+  echo $error_msg;
+  }
+  ?>
+        <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="post" name="registration_form" >
+              <div class="md-form ">
+                <input  id="ngoname" class="form-control" type="text" name="ngoname">
+                <label for="Form-email3">Name</label>
+              </div>
+              <div class="md-form ">
+                <input  id="coordinator" class="form-control" type="text" name="coordinator">
+                <label for="Form-email3">Coordinator</label>
+              </div>
+              <div class="md-form ">
+                <input type="text" id="email" class="form-control" type="text" name="email">
+                <label for="Form-email3">Email</label>
+              </div>
+              <div class="md-form pb-1 pb-md-3">
+                <input type="password" class="form-control"  type="password"
+                name="password"
+                id="password">
+                <label for="Form-pass3">Password</label>
+                
+              </div>
+              <div class="md-form pb-1 pb-md-3">
+                <input type="password" class="form-control" name="confirmpwd" id="confirmpwd">
+                <label for="Form-pass3">Confirm password</label>
+                
+              </div>
+              <div class="md-form ">
+                <input type="text" id="mobile" class="form-control"  name="mobile">
+                <label for="Form-email3">Phone no.</label>
+              </div>
+              <div class="md-form ">
+                <input type="text" id="address" class="form-control"  name="address">
+                <label for="address">Address</label>
+              </div>
+  
+<!-- Form inline with radios -->
+              <!--Grid row-->
+              <div class="row d-flex align-items-center mb-4">
+                <!--Grid column-->
+                <div class="col-md-1 col-md-5 d-flex align-items-start">
+                  <div class="text-center">
+                    <br>
+                    <button type="button" class="btn aqua-gradient btn-primary z-depth-1a"  onclick="return regformhashngo(this.form,
+                    this.form.ngoname,
+                    this.form.coordinator,
+                    this.form.email,
+                    this.form.password,
+                    this.form.confirmpwd,
+                    this.form.mobile,
+                    this.form.address);">Signup</button>
+                  </div>
+                </div>
+              </form>
+
+
+
+
+              <!--Grid column-->
+              <!--Grid column-->
+              
+              <!--Grid column-->
+              <div class="col-md-7">
+                <p class="font-small grey-text d-flex justify-content-end mt-3">Already have an account? <a href="login.php" class="dark-grey-text ml-1 font-weight-bold"> Sign in</a></p>
+              </div>
+              <!--Grid column-->
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             
           </div>
           
