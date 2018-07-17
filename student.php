@@ -26,8 +26,11 @@ include("head.php")
 
   <div class="form-group">
     <label for="exampleFormControlTextarea2">Ask questions.....</label>
-    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" value="placeholder"></textarea>
-    <button type="button" class="btn btn-grey btn-primary z-depth-1a" style="position: absolute; top: 24em; left: 87em;">Submit</button>
+    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Question...."></textarea>
+    <button type="button" style="background-color: white; position: absolute; top: 20em;"><i class="far fa-comment-alt"></i></button>
+    <input type="text" placeholder="comments..." id="1" style="position: absolute;top: 20em; left: 7em;">
+    <button type="button" class="btn-cyan" style="position: absolute;top: 20em;left: 19em; cursor: pointer;">Submit</button>
+    <button type="button" class="btn btn-grey btn-primary z-depth-1a" style="position: absolute; top: 24em; left: 88em;">Post</button>
 </div>
 </form>
 <br>
