@@ -62,7 +62,12 @@ color: #4f4f4f; }
               <!-- Default inline 1-->
 <div class="custom-control custom-radio custom-control-inline">
   <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample" onclick="document.getElementById('ngo').style.display = 'none';document.getElementById('user').style.display = 'block'">
-  <label class="custom-control-label" for="defaultInline1">Volunteer/Student</label>
+  <label class="custom-control-label" for="defaultInline1">Student</label>
+</div>
+
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample" onclick="document.getElementById('ngo').style.display = 'none';document.getElementById('user').style.display = 'block'">
+  <label class="custom-control-label" for="defaultInline3">Volunteer</label>
 </div>
 
 <!-- Default inline 2-->
@@ -70,7 +75,7 @@ color: #4f4f4f; }
   <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample" onclick="document.getElementById('ngo').style.display = 'block';document.getElementById('user').style.display = 'none'">
   <label class="custom-control-label" for="defaultInline2">NGO</label>
 </div>
-          </div>
+          </div><br>
           <div class="card-body mx-8 mt-5" id="user">
             <?php
   if (!empty($error_msg)) {
@@ -145,7 +150,78 @@ color: #4f4f4f; }
             </div>
 
 
+<div class="card-body mx-8 mt-5" id="user">
+            <?php
+  if (!empty($error_msg)) {
+  echo $error_msg;
+  }
+  ?>
 
+            <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="post" name="registration_form" >
+              <div class="md-form ">
+                <input   class="form-control" type="text" name="teamname">
+                <label for="Form-email3">Your Name</label>
+              </div>
+              <div class="md-form ">
+                <input type="text"  class="form-control" type="text" name="email">
+                <label for="Form-email3">Your email</label>
+              </div>
+              <div class="md-form pb-1 pb-md-3">
+                <input type="password" class="form-control"  type="password"
+                name="password">
+                <label for="Form-pass3">Your password</label>
+                
+              </div>
+              <div class="md-form pb-1 pb-md-3">
+                <input type="password" class="form-control" name="confirmpwd">
+                <label for="Form-pass3">Confirm password</label>
+                
+              </div>
+              <div class="md-form ">
+                <input type="text" class="form-control"  name="mobile">
+                <label for="Form-email3">Your mobile</label>
+              </div>
+              <div class="md-form ">
+                <input type="text"  class="form-control"  name="age">
+                <label for="age">Your Age</label>
+              </div>
+              <!-- Form inline with radios -->
+              <div class="form-inline">
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="exampleRadiosInline2" value="Male">
+        <label class="form-check-label" for="exampleRadiosInline2">
+            Male
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="exampleRadiosInline3" value="Female">
+        <label class="form-check-label" for="exampleRadiosInline3">
+            Female
+        </label>
+    </div>
+    <br>
+      <button type="button" class="btn aqua-gradient btn-primary z-depth-1a"  onclick="return regformhashvolunteer(this.form,
+                    this.form.teamname,
+                    this.form.email,
+                    this.form.password,
+                    this.form.confirmpwd,
+                    this.form.mobile,
+                    this.form.age);">Signup</button>
+</div>
+</form>
+
+
+
+
+              <!--Grid column-->
+              <!--Grid column-->
+              
+              <!--Grid column-->
+              <div class="col-md-7">
+                <p class="font-small grey-text d-flex justify-content-end mt-3">Already have an account? <a href="login.php" class="dark-grey-text ml-1 font-weight-bold"> Sign in</a></p>
+              </div>
+              <!--Grid column-->
+            </div>
 
 
 
@@ -192,6 +268,7 @@ color: #4f4f4f; }
                 <input type="text" id="address" class="form-control"  name="address">
                 <label for="address">Address</label>
               </div>
+            
   
 <!-- Form inline with radios -->
               <!--Grid row-->
@@ -225,39 +302,6 @@ color: #4f4f4f; }
               <!--Grid column-->
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
           </div>
           
           <!--/Form with header-->

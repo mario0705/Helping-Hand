@@ -1,9 +1,7 @@
 <html>
     <body>
-        <footer style="position: fixed; bottom: 0px; width: 100%;" class="page-footer text-center text-md-left pt-4">
+        <footer style="position: relative; bottom: 0px; width: 100%; margin-top: 400px; position: -webkit-sticky;position: sticky;" class="page-footer text-center text-md-left pt-4">
             
-        </div>
-    </div>
     <!--/.Footer Links-->
     <hr>
     <hr>
@@ -24,6 +22,7 @@
     </div>
     <!--/.Copyright-->
 </footer>
+
 <!--/.Footer-->
 <!-- SCRIPTS -->
 <!-- JQuery -->
@@ -34,9 +33,16 @@
 <script type="text/javascript" src="2/bootstrap.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="2/mdb.js"></script>
+
 <script>
-// SideNav Initialization
-$(".button-collapse").sideNav();
-new WOW().init();
-</script><div class="drag-target" style="left: 0px; touch-action: pan-y; -moz-user-select: none;"></div>
-<div class="hiddendiv common"></div></body></html>
+    // SideNav Initialization
+    $(".button-collapse").sideNav();
+    new WOW().init();
+</script>
+
+<div class="drag-target" style="left: 0px; touch-action: pan-y; -moz-user-select: none;"></div>
+<div class="hiddendiv common"></div>
+
+</body>
+
+</html>

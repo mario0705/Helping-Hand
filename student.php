@@ -20,8 +20,15 @@ include("head.php")
 <body>
 <form>
   <center>
-    <input type="text" placeholder="search" />&nbsp;<button style="background-color: white; border: none;"><i class="fas fa-search" style="font-size: 1.3em"></i></button>
+    <input type="text" placeholder="search" />&nbsp;<button style="background-color: white; border: none; cursor: pointer;"><i class="fas fa-search" style="font-size: 1.3em"></i></button>
   </center>
+  <br><br><br>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea2">Ask questions.....</label>
+    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" value="placeholder"></textarea>
+    <button type="button" class="btn btn-grey btn-primary z-depth-1a" style="position: absolute; top: 24em; left: 87em;">Submit</button>
+</div>
 </form>
 <br>
 </main>
