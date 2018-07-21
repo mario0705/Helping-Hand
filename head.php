@@ -87,13 +87,12 @@ include_once 'includes/psl-config.php';
     <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-envelope-o"></i> Contact us<i class="fa fa-angle-down rotate-icon"></i></a>
     <div class="collapsible-body">
         <ul class="list-unstyled">
-<<<<<<< HEAD
-            <li><div style="padding-top: 1%;">&nbsp&nbsp Vraj Patel</div>
+
+            <!-- <li><div style="padding-top: 1%;">&nbsp&nbsp Vraj Patel</div>
             <li><a href="tel:8905948042" class="waves-effect">+918905948042</a>
         </li>
         <li><div style="padding-top: 1%;">&nbsp&nbsp Smit Patel</div>
-        <li><a href="tel:8153895063" class="waves-effect">+919408599538</a>
-=======
+        <li><a href="tel:8153895063" class="waves-effect">+919408599538</a> -->
             <li><div style="padding-top: 1%;">&nbsp&nbsp Patel Vraj</div>
             <li><a href="tel:9375131548" class="waves-effect">+919375131548</a>
         </li>
@@ -105,7 +104,6 @@ include_once 'includes/psl-config.php';
                  <li><a href="tel:9375131548" class="waves-effect">+919375131548</a>
                 <li><div style="padding-top: 1%;">&nbsp&nbsp  Goswami Krishna</div>
                      <li><a href="tel:9375131548" class="waves-effect">+919375131548</a>
->>>>>>> f76fd98ec493dc961f1a4ec82acce2bbe8d071c3
     </li>
     
 </ul>

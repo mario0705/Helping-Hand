@@ -67,7 +67,7 @@ color: #4f4f4f; }
           <!--Header-->
           <div class="card-body mx-5 mt-5">
             
-            <?php echo '<p class="blue-text">Round ' . $round . '   </p>'; ?>
+            <!-- <?php echo '<p class="blue-text">Round ' . $round . '   </p>'; ?> -->
             <!--Body-->
             <form action="includes/process_login.php" method="post" name="login_form">
               <div class="md-form ">
