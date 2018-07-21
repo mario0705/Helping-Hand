@@ -24,23 +24,23 @@ include("head.php")
   </center>
   <br><br><br>
   <!-- Card -->
-<center><div class="card" style="width: 40em;">
-
-  
-
-  <!-- Card content -->
+<div class="card">
+<!-- Card content -->
   <div class="card-body">
-  	 <center>
-    <input type="text" placeholder="Add link...">&nbsp;<button style="cursor: pointer;" class="btn btn-cyan">Upload link</button>
-  </center>
+  	 <div class="form-group">
+    <label for="exampleFormControlTextarea2">Ask questions.....</label>
+    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Question...."></textarea>
+    <button type="button" style="background-color: white;"><i class="far fa-comment-alt"></i></button>
+    <input type="text" placeholder="comments..." id="1">
+    <button type="button" class="btn btn-grey btn-primary z-depth-1a">Submit</button>
+	</div>
     <!-- Button -->
-    <!-- <a href="#" class="btn btn-cyan">Button</a> -->
+    <a href="#" class="btn btn-primary" style="position: relative; left: 75em;">Post</a>
 
   </div>
 
 </div>
 <!-- Card -->
-</center>
  
 </form>
 <br>
