@@ -1,6 +1,14 @@
 <html>
+<style type="text/css">
+    footer .page-footer .footer-copyright {
+ position: relative;
+ bottom: 0px;
+ width: 100%;
+ background: black;
+z-index:9999999;}
+</style>
     <body>
-        <footer style="position: relative; bottom: 0px; width: 100%; margin-top: 400px; position: -webkit-sticky;position: sticky;" class="page-footer text-center text-md-left pt-4">
+        <footer class="page-footer bottom-footer font-small  pt-4">
             
     <!--/.Footer Links-->
     <hr>
@@ -17,7 +25,7 @@
     <!--Copyright-->
     <div class="footer-copyright py-3 text-center">
         <div class="container-fluid">
-            <a href="http://spectrum.adit.ac.in/"> Helping Hand </a>
+            <a href="http://helping-hand.azurewebsites.net/"> Helping Hand </a>
         </div>
     </div>
     <!--/.Copyright-->

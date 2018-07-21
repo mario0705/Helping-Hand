@@ -14,12 +14,16 @@ include("head.php")
 <script type="text/JavaScript" src="js/sha512.js"></script>
 <script type="text/JavaScript" src="js/forms.js"></script>
 <script type="text/JavaScript" src="js/forms2.js"></script>
+<script type="text/JavaScript" src="js/forms3.js"></script>
 <style type="text/css">
 #ngo
 {
   display: none;
 }
 #user{
+  display: none;
+}
+#volunteer{
   display: none;
 }
 .form-gradient .font-small {
@@ -61,18 +65,18 @@ color: #4f4f4f; }
           <div class="card-body mx-5 mt-5">
               <!-- Default inline 1-->
 <div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample" onclick="document.getElementById('ngo').style.display = 'none';document.getElementById('user').style.display = 'block'">
+  <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample" onclick="document.getElementById('ngo').style.display = 'none';document.getElementById('user').style.display = 'block';document.getElementById('volunteer').style.display = 'none';">
   <label class="custom-control-label" for="defaultInline1">Student</label>
 </div>
 
 <div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample" onclick="document.getElementById('ngo').style.display = 'none';document.getElementById('user').style.display = 'block'">
+  <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample" onclick="document.getElementById('ngo').style.display = 'none';document.getElementById('volunteer').style.display = 'block';document.getElementById('user').style.display = 'none'">
   <label class="custom-control-label" for="defaultInline3">Volunteer</label>
 </div>
 
 <!-- Default inline 2-->
 <div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample" onclick="document.getElementById('ngo').style.display = 'block';document.getElementById('user').style.display = 'none'">
+  <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample" onclick="document.getElementById('ngo').style.display = 'block';document.getElementById('user').style.display = 'none';document.getElementById('volunteer').style.display = 'none';">
   <label class="custom-control-label" for="defaultInline2">NGO</label>
 </div>
           </div><br>
@@ -126,8 +130,7 @@ color: #4f4f4f; }
         </label>
     </div>
     <br>
-      <button type="button" class="btn aqua-gradient btn-primary z-depth-1a"  onclick="return regformhash(this.form,
-                    this.form.teamname,
+      <button type="button" class="btn aqua-gradient btn-primary z-depth-1a"  onclick="return regformhash(this.form,this.form.teamname,
                     this.form.email,
                     this.form.password,
                     this.form.confirmpwd,
@@ -150,7 +153,7 @@ color: #4f4f4f; }
             </div>
 
 
-<div class="card-body mx-8 mt-5" id="user">
+<div class="card-body mx-8 mt-5" id="volunteer">
             <?php
   if (!empty($error_msg)) {
   echo $error_msg;
@@ -159,7 +162,7 @@ color: #4f4f4f; }
 
             <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="post" name="registration_form" >
               <div class="md-form ">
-                <input   class="form-control" type="text" name="teamname">
+                <input   class="form-control" type="text" name="volunteer">
                 <label for="Form-email3">Your Name</label>
               </div>
               <div class="md-form ">
@@ -188,20 +191,20 @@ color: #4f4f4f; }
               <!-- Form inline with radios -->
               <div class="form-inline">
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="gender" id="exampleRadiosInline2" value="Male">
-        <label class="form-check-label" for="exampleRadiosInline2">
+        <input class="form-check-input" type="radio" name="gender" id="exampleRadiosInline4" value="Male">
+        <label class="form-check-label" for="exampleRadiosInline4">
             Male
         </label>
     </div>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="gender" id="exampleRadiosInline3" value="Female">
-        <label class="form-check-label" for="exampleRadiosInline3">
+        <input class="form-check-input" type="radio" name="gender" id="exampleRadiosInline5" value="Female">
+        <label class="form-check-label" for="exampleRadiosInline5">
             Female
         </label>
     </div>
     <br>
       <button type="button" class="btn aqua-gradient btn-primary z-depth-1a"  onclick="return regformhashvolunteer(this.form,
-                    this.form.teamname,
+                    this.form.volunteer,
                     this.form.email,
                     this.form.password,
                     this.form.confirmpwd,

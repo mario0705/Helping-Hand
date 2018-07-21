@@ -9,21 +9,18 @@ if (isset($_POST['email'], $_POST['p'])) {
     $password = $_POST['p']; // The hashed password.
  
     if (login($email, $password, $mysqli) == true) {
-                $stmt = $mysqli->prepare("SELECT round FROM round WHERE id ='0'");
-                $stmt->execute();
-                $stmt->bind_result($round);
-                 $stmt->fetch();
-                 if ($round == "1") {
+                
+                 if ($_SESSION['type'] == "volunteer") {
                      # code...
-                    header('Location: ../index.php');
+                    header('Location: ../volunteer.php');
                  }
-                 else if ($round == "2") {
+                 else if ($_SESSION['type'] == "ngo") {
                      # code...
-                    header('Location: ../round2/redirect.php');
+                    header('Location: ../ngo.php');
                  }
-                 else if ($round == "3") {
+                 else if ($_SESSION['type'] == "student") {
                      # code...
-                    header('Location: ../round3/redirect.php');
+                    header('Location: ../student.php');
                  }
         
     } else {

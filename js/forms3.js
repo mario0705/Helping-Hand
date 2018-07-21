@@ -1,39 +1,30 @@
-function formhash(form, password) {
-    // Create a new element input, this will be our hashed password field. 
-    var p = document.createElement("input");
- 
-    // Add the new element to our form. 
-    form.appendChild(p);
-    p.name = "p";
-    p.type = "hidden";
-    p.value = hex_sha512(password.value);
- 
-    // Make sure the plaintext password doesn't get sent. 
-    password.value = "";
- 
-    // Finally submit the form. 
-    form.submit();
-}
- 
-function regformhash(form, teamname, email, password, conf,mobile, age) {
+function regformhashvolunteer(form, volunteer, email, password, confirmpwd, mobile ,age) {
      // Check each field has a value
-    if (teamname.value == '' ||
+    if (volunteer.value == '' ||
         email.value == ''     || 
-        password.value == ''  || 
-          conf.value == '' ||
-           mobile.value == ''     ||
+          password.value == ''  || 
+          confirmpwd.value == '' ||
+           mobile.value == ''         ||
           age.value == '' ) {
  
-        alert('You must provide all the requested details. Please try again');
+        alert(volunteer.value);
+        alert(email.value);
+        alert(password.value);
+        alert(confirmpwd.value);
+                alert(mobile.value);
+                        alert(age.value);
+
+
+        alert('You must provide all the requested details. Please try again 1');
         return false;
     }
  
     // Check the username
  
     re = /^\w+$/; 
-    if(!re.test(form.teamname.value)) { 
-        alert("Username must contain only letters, numbers and underscores. Please try again"); 
-        form.Teamname.focus();
+    if(!re.test(form.volunteer.value)) { 
+        alert("Username must contain only letters, numbers and underscores. Please try again 2"); 
+        form.volunteer.focus();
         return false; 
     }
  
@@ -51,14 +42,13 @@ function regformhash(form, teamname, email, password, conf,mobile, age) {
  
     var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/; 
     if (!re.test(password.value)) {
-        alert('Passwords must contain at least one number, one lowercase and one uppercase letter.  Please try again');
+        alert('Passwords must contain at least one number, one lowercase and one uppercase letter.  Please try again 3');
         return false;
     }
  
     // Check password and confirmation are the same
-    if (password.value != conf.value) {
-        alert(password.value);
-        alert(conf.value);
+    if (password.value != confirmpwd.value) {
+        alert('Your password and confirmation do not match. Please try again');
         form.password.focus();
         return false;
     }
@@ -79,7 +69,7 @@ function regformhash(form, teamname, email, password, conf,mobile, age) {
  
     // Make sure the plaintext password doesn't get sent. 
     password.value = "";
-    conf.value = "";
+    confirmpwd.value = "";
  
     // Finally submit the form. 
     form.submit();
