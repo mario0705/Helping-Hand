@@ -36,9 +36,32 @@ include("head.php")
     </div>
     <div class="card-body">
         <!-- Default input -->
+        <div class="row">
+        	<div class="col-md-6">
 		<label for="date" class="">Enter date:</label>
 		<input type="text" id="date" class="form-control" name="date" placeholder="DD/MM/YY" style="width: 8em;">
-		<br>
+		</div>
+		<div class="col-md-6">
+		<div class="btn-group">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Subject</button>
+
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Computer Science</a>
+        				<a class="dropdown-item" href="#">Mathematics</a>
+        				<a class="dropdown-item" href="#">Physics</a>
+        				<a class="dropdown-item" href="#">Chemistry</a>
+        				<a class="dropdown-item" href="#">Biology</a>
+        				<a class="dropdown-item" href="#">Accounts</a>
+        				<a class="dropdown-item" href="#">History</a>
+        				<a class="dropdown-item" href="#">English</a>
+        				<a class="dropdown-item" href="#">Management</a>
+        				<a class="dropdown-item" href="#">Finance</a>
+        				<a class="dropdown-item" href="#">Electronics</a>
+       
+    </div>
+</div>
+		</div>
+	</div>
 		  <!--Grid row-->
                 <div class="row">
 
