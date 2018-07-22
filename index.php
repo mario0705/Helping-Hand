@@ -16,7 +16,7 @@ $stmt->fetch();
 include("head.php")
 ?>
 <!--Main layout-->
-<main>
+<main style="position: relative;top: -5em;right: 8em;">
     
     <div class="container-fluid text-center">
         <!--Card-->
