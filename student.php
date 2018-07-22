@@ -68,64 +68,50 @@ include("head.php")
 <!-- <div class="row"> -->
 
     <!--Grid column-->
-    <div class="col-md-6">
-
-        <!--Card-->
+    <div class="col-md-6 row">
+        <div class="card float-left" style="width: 50%;">
+            <div class="card-body">
+                <form class="form-inline mr-auto">
+                  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"><br><br><br>
+                  <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">Search</button>
+                </form> 
+            </div>
+        </div>
+    </div><br>
+    <div class="col-md-6 row">
         <div class="card" style="width: 80%">
           <div class="header peach-gradient">
-
             <div class="row d-flex justify-content-center">
                 <h3 class="white-text mb-0 py-5 font-weight-bold">Ask a Question</h3>
             </div>
-
-        </div>
-            <div class="card-body mx-4">
-                <!--Name-->
-              <div class="md-form">
-                <i class="fa fa-tag prefix grey-text float-left"></i>
-                <input type="text" id="form106" class="form-control">
-                <label for="form106">Subject</label>
-            </div>
-
+          </div>
+          <div class="card-body mx-4">
             <div class="md-form">
-                <i class="fa fa-pencil prefix grey-text"></i>
-                <textarea type="text" id="form107" class="md-textarea form-control" rows="5"></textarea>
-                <label for="form107">Your message</label>
+              <i class="fa fa-tag prefix grey-text float-left"></i>
+              <input type="text" id="form106" class="form-control">
+              <label for="form106">Subject</label>
             </div>
-
-
-            <!--Grid row-->
+            <div class="md-form">
+              <i class="fa fa-pencil prefix grey-text"></i>
+              <textarea type="text" id="form107" class="md-textarea form-control" rows="4"></textarea>
+              <label for="form107">Your message</label>
+            </div>
             <div class="row d-flex align-items-center mb-3 mt-4">
-
-                <!--Grid column-->
-                <div class="col-md-12">
-                    <div class="text-center">
-                        <button type="button" class="btn btn-grey btn-rounded z-depth-1a">Send</button>
-                    </div>
+              <div class="col-md-12">
+                <div class="text-center">
+                  <button type="button" class="btn btn-grey btn-rounded z-depth-1a">Send</button>
                 </div>
-                <!--Grid column-->
+              </div>
             </div>  
-            </div>
+          </div>
         </div>
-        <!--/.Card-->
     </div>
     <!--Grid column-->
-    <!--Grid column--><br>
-    <div class="col-md-6">
-        <!--Card-->
-        <div class="card float-left" style="width: 50%;">
-            <div class="card-body">
-               <form class="form-inline mr-auto">
-    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"><br><br><br>
-    <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">Search</button>
-</form> 
-            </div>
-        </div>
-        <!--/.Card-->
-    </div>
+    <!--Grid column-->
+    
     <!--Grid column-->
 <!-- </div> -->
-<br><br><br><br><br><br><br>
+<br><br><br><br>
 <!--Grid row-->
 <div class="row">
     <div class="col-sm-4 col-lg-3">
