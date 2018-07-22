@@ -8,28 +8,28 @@
 z-index:9999999;}
 </style>
     <body>
-        <footer class="page-footer bottom-footer font-small  pt-4">
+        <!-- <footer class="page-footer bottom-footer font-small  pt-4"> -->
             
     <!--/.Footer Links-->
-    <hr>
-    <hr>
+    <!-- <hr>
+    <hr> -->
     <!--Social buttons-->
-    <div class="social-section text-center">
+    <!-- <div class="social-section text-center">
         <ul class="list-unstyled list-inline">
             <li class="list-inline-item"><a href="https://www.facebook.com/spectrumadit/" class="btn-floating btn-fb waves-effect waves-light"><i class="fab fa-facebook"> </i></a></li>
             <li class="list-inline-item"><a href="https://www.instagram.com/spectrumadit/" class="btn-floating btn-gplus waves-effect waves-light"><i class="fab fa-instagram"> </i></a></li>
             
         </ul>
-    </div>
+    </div> -->
     <!--/.Social buttons-->
     <!--Copyright-->
-    <div class="footer-copyright py-3 text-center">
+    <!-- <div class="footer-copyright py-3 text-center">
         <div class="container-fluid">
             <a href="http://helping-hand.azurewebsites.net/"> Helping Hand </a>
         </div>
-    </div>
+    </div> -->
     <!--/.Copyright-->
-</footer>
+<!-- </footer> -->
 
 <!--/.Footer-->
 <!-- SCRIPTS -->

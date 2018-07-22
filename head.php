@@ -52,15 +52,14 @@ $logged = 'out';
                 
                 <!--/Social-->
                 <!--Search Form-->
-                <li>
+                <!-- <li>
                     <form class="search-form" role="search">
                         <div class="form-group md-form mt-0 pt-1 waves-light waves-effect waves-light">
                             ___________________________
                         </div>
                     </form>
                 </li>
-                <!--/.Search Form-->
-                <!-- Side navigation links -->
+                
                 <li>
                     <ul class="collapsible collapsible-accordion">
                         
@@ -88,17 +87,11 @@ $logged = 'out';
                     
                 </li><li>
                 <p>_____________________________</p>
-            </li>
+            </li> -->
            
-    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-envelope-o"></i> Contact us<i class="fa fa-angle-down rotate-icon"></i></a>
+    <!-- <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-envelope-o"></i> Contact us<i class="fa fa-angle-down rotate-icon"></i></a>
     <div class="collapsible-body">
         <ul class="list-unstyled">
-
-            <!-- <li><div style="padding-top: 1%;">&nbsp&nbsp Vraj Patel</div>
-            <li><a href="tel:8905948042" class="waves-effect">+918905948042</a>
-        </li>
-        <li><div style="padding-top: 1%;">&nbsp&nbsp Smit Patel</div>
-        <li><a href="tel:8153895063" class="waves-effect">+919408599538</a> -->
             <li><div style="padding-top: 1%;">&nbsp&nbsp Patel Vraj</div>
             <li><a href="tel:9375131548" class="waves-effect">+919375131548</a>
         </li>
@@ -119,9 +112,9 @@ $logged = 'out';
 <p>_____________________________</p>
 </li>
 </ul>
-</li>
+</li> -->
 <!--/. Side navigation links -->
-</ul>
+<!-- </ul>
 <ul>
     <a href="first_stu.php" style="color: white;">Field select</a>
 </ul>
@@ -135,20 +128,19 @@ $logged = 'out';
     <a href="join_us.php" style="color: white;">Join us</a>
 </ul>
 <div class="sidenav-bg mask-strong"></div>
-</div>
+</div> -->
 <!--/. Sidebar navigation -->
 <!-- Navbar -->
-<nav class="navbar fixed-top navbar-toggleable-md blue-gradient navbar-expand-lg scrolling-navbar double-nav">
+<!-- <nav class="navbar fixed-top navbar-toggleable-md blue-gradient navbar-expand-lg scrolling-navbar double-nav"> -->
 <!-- SideNav slide-out button -->
-<div class="float-left">
+<!-- <div class="float-left">
 <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
 </div>
-<!-- Breadcrumb-->
 <div class="breadcrumb-dn mr-auto">
 <p><a href="index.php">Helping Hand</a></p>
 </div>
 <ul class="nav navbar-nav nav-flex-icons ml-auto">
-<li class="nav-item">
+<li class="nav-item"> -->
 <?php  if ($isTouch = empty($logged)) {
 echo ' ';
 }
@@ -156,7 +148,7 @@ elseif ($logged== "in"){
 echo ' <a class="nav-link waves-effect waves-light" href="redirect.php"><i class="fa fa-angle-right"></i> <span class="clearfix d-none d-sm-inline-block">Home</span></a>';
 }
 ?>
-</li>
+<!-- </li>
 <li class="nav-item">
 <a class="nav-link waves-effect waves-light" href="feedback.php"><i class="fa fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Feedback</span></a>
 </li>
@@ -164,7 +156,7 @@ echo ' <a class="nav-link waves-effect waves-light" href="redirect.php"><i class
 <a class="nav-link dropdown-toggle waves-effect waves-light" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 Account
 </a>
-<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink"> -->
 <?php  if ($logged== "in") {
 echo '<a class="dropdown-item waves-effect waves-light" href="logout.php">Logout</a>';
 }
