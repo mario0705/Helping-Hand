@@ -11,7 +11,7 @@ $logged = 'out';
 ?>
 
 <html lang="en"><head>
-    <title>Helping</title>
+    <title>Helping Hand</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
@@ -76,16 +76,16 @@ $logged = 'out';
                         </ul>
                         
                     </div>
-                </li>
+                <!--</li>
                 <li>
                     <p>_____________________________</p>
                 </li>
-                <li>
+               <!-- <li>
                     <a href="leaderboard.php" class=" waves-effect arrow-r"><i class="fa fa-github-alt" >
                         
                     </i> Leaderboard</i></a>
                     
-                </li><li>
+                </li>--><li>
                 <p>_____________________________</p>
             </li> -->
            
