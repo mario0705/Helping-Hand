@@ -45,7 +45,7 @@ include("head.php")
 		
  
 
-        <div class="form-inline">
+        <div class="form">
         <div class="form-check">
             <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline4" value="computerscience">
                 <label class="form-check-label" for="exampleRadiosInline4">
