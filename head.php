@@ -15,7 +15,7 @@ $logged = 'out';
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=0.8, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=0.8, initial-scale=1, shrink-to-fit=yes">
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
