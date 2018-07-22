@@ -13,7 +13,7 @@ $stmt->bind_result($round);
 $stmt->fetch();
 ?>
 <?php
-include("head.php")
+//include("head.php")
 ?>
 <!--Main layout-->
 <main>
@@ -129,7 +129,7 @@ Helping Hand - The learning application is for students.The application offers c
     
 </main>
 <?php
-include("foot.php")
+//include("foot.php")
 ?>
 <!--/Main layout-->
 <!--Footer-->
