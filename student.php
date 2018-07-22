@@ -104,39 +104,26 @@ include("head.php")
                     </div>
                 </div>
                 <!--Grid column-->
-
             </div>  
             </div>
-
         </div>
         <!--/.Card-->
-
     </div>
     <!--Grid column-->
-
     <!--Grid column-->
     <div class="col-md-6">
-
         <!--Card-->
-        <div class="card" style="width: 50%;">
-
-           
-
-           
-
+        <div class="card float-right" style="width: 50%;">
             <div class="card-body">
                <form class="form-inline mr-auto">
     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"><br><br><br>
     <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">Search</button>
 </form> 
             </div>
-
         </div>
         <!--/.Card-->
-
     </div>
     <!--Grid column-->
-
 </div>
 <br><br>
 <!--Grid row-->
@@ -146,36 +133,19 @@ include("head.php")
             <a class="navbar-brand" href="#">Recent Questions</a>
             <nav class="nav nav-pills flex-column">
                 <a class="nav-link active" href="#item-1">Question 1</a>
-                <!-- <nav class="nav nav-pills flex-column">
-                    <a class="nav-link ml-3 my-1" href="#item-1-1">Item 1-1</a>
-                    <a class="nav-link ml-3 my-1" href="#item-1-2">Item 1-2</a>
-                </nav> -->
                 <a class="nav-link" href="#item-2">Question 2</a>
                 <a class="nav-link" href="#item-3">Question 3</a>
-                <!-- <nav class="nav nav-pills flex-column">
-                    <a class="nav-link ml-3 my-1" href="#item-3-1">Item 3-1</a>
-                    <a class="nav-link ml-3 my-1" href="#item-3-2">Item 3-2</a>
-                </nav> -->
             </nav>
         </nav>
     </div>
-
     <div class="col-sm-8 col-lg-9">
         <div data-spy="scroll" class="scrollspy-example z-depth-1 mt-4" data-target="#navbar-example3" data-offset="0">
             <h4 id="item-1">Question 1</h4>
             <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
-            <!-- <h5 id="item-1-1">Item 1-1</h5>
-            <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
-            <h5 id="item-1-2">Item 2-2</h5>
-            <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p> -->
             <h4 id="item-2">Question 2</h4>
             <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
             <h4 id="item-3">Question 3</h4>
             <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
-            <!-- <h5 id="item-3-1">Item 3-1</h5>
-            <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
-            <h5 id="item-3-2">Item 3-2</h5>
-            <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p> -->
         </div>
     </div>
 </div><br><br>
