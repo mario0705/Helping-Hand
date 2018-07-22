@@ -129,7 +129,7 @@ function login($email, $password, $mysqli) {
            // }
         } 
     }
-    if ($stmt = $mysqli->prepare("SELECT id, ngoname, password 
+    if ($stmt = $mysqli->prepare("SELECT id, ngoname, pwd 
         FROM ngo WHERE email = ?
         LIMIT 1")) {
         $stmt->bind_param('s', $email);  // Bind "$email" to parameter.
@@ -161,9 +161,9 @@ function login($email, $password, $mysqli) {
                     $user_id = preg_replace("/[^0-9]+/", "", $user_id);
                     $_SESSION['user_id'] = $user_id;
                     // XSS protection as we might print this value
-                    $volunteer = preg_replace("/[^a-zA-Z0-9_\-]+/", 
+                    $ngoname = preg_replace("/[^a-zA-Z0-9_\-]+/", 
                                                                 "", 
-                                                                $volunteer);
+                                                                $ngoname);
                     $_SESSION['ngoname'] = $ngoname;
                     $_SESSION['login_string'] = hash('sha512', 
                               $db_password . $user_browser);
