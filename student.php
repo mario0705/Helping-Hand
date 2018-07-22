@@ -65,7 +65,7 @@ include("head.php")
 <!-- Section: form dark -->
 <!-- Section: form dark -->
 <!--Grid row-->
-<div class="row">
+<!-- <div class="row"> -->
 
     <!--Grid column-->
     <div class="col-md-6">
@@ -110,10 +110,10 @@ include("head.php")
         <!--/.Card-->
     </div>
     <!--Grid column-->
-    <!--Grid column-->
+    <!--Grid column--><br>
     <div class="col-md-6">
         <!--Card-->
-        <div class="card float-right" style="width: 50%;">
+        <div class="card float-left" style="width: 50%;">
             <div class="card-body">
                <form class="form-inline mr-auto">
     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"><br><br><br>
@@ -124,8 +124,8 @@ include("head.php")
         <!--/.Card-->
     </div>
     <!--Grid column-->
-</div>
-<br><br>
+<!-- </div> -->
+<br><br><br><br><br><br><br>
 <!--Grid row-->
 <div class="row">
     <div class="col-sm-4 col-lg-3">
