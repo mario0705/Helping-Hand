@@ -7,10 +7,19 @@ $logged = 'in';
 } else {
 $logged = 'out';
 }
-$stmt = $mysqli->prepare("SELECT round FROM round WHERE id ='0'");
-$stmt->execute();
-$stmt->bind_result($round);
-$stmt->fetch();
+$status =$_SESSION['type'];
+  if ($status == "volunteer") {
+                     # code...
+                   header('Location: volunteer.php');
+                 }
+                 elseif ($status == "ngo") {
+                     # code...
+                   header('Location: ngo.php');
+                 }
+                 elseif ($status == "student") {
+                     # code...
+                   header('Location: student.php');
+                 }
 ?>
 <?php
 include("head.php")

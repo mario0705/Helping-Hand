@@ -1,6 +1,6 @@
 <?php
 include_once 'psl-config.php';
- 
+
 function sec_session_start() {
     $session_name = 'sec_session_id';   // Set a custom session name 
     $secure = SECURE;
@@ -62,7 +62,7 @@ function login($email, $password, $mysqli) {
                     $_SESSION['login_string'] = hash('sha512', 
                               $db_password . $user_browser);
                     // Login successful.
-                     $_SESSION['type']="student";
+                     $_SESSION['type'] ="student";
                     return true;
                 } else {
                     // Password is not correct
@@ -115,7 +115,7 @@ function login($email, $password, $mysqli) {
                     $_SESSION['volunteer'] = $volunteer;
                     $_SESSION['login_string'] = hash('sha512', 
                               $db_password . $user_browser);
-                    $_SESSION['type']="volunteer";
+                    $_SESSION['type'] ="volunteer";
                     // Login successful.
                     return true;
                 } else {
@@ -167,7 +167,7 @@ function login($email, $password, $mysqli) {
                     $_SESSION['ngoname'] = $ngoname;
                     $_SESSION['login_string'] = hash('sha512', 
                               $db_password . $user_browser);
-                    $_SESSION['type']="ngo";
+                    $_SESSION['type'] = "ngo";
                     // Login successful.
                     return true;
                 } else {
@@ -224,41 +224,41 @@ function login_check($mysqli) {
  
         // Get the user-agent string of the user.
         $user_browser = $_SERVER['HTTP_USER_AGENT'];
+        return true;
+    }
+ elseif(isset($_SESSION['user_id'], 
+                        $_SESSION['ngoname'], 
+                        $_SESSION['login_string'])) {
  
-        if ($stmt = $mysqli->prepare("SELECT password 
-                                      FROM members 
-                                      WHERE id = ? LIMIT 1")) {
-            // Bind "$user_id" to parameter. 
-            $stmt->bind_param('i', $user_id);
-            $stmt->execute();   // Execute the prepared query.
-            $stmt->store_result();
+        $user_id = $_SESSION['user_id'];
+        $login_string = $_SESSION['login_string'];
+        $teamname = $_SESSION['ngoname'];
  
-            if ($stmt->num_rows == 1) {
-                // If the user exists get variables from result.
-                $stmt->bind_result($password);
-                $stmt->fetch();
-                $login_check = hash('sha512', $password . $user_browser);
+        // Get the user-agent string of the user.
+        $user_browser = $_SERVER['HTTP_USER_AGENT'];
+         return true;
+    }
+    elseif(isset($_SESSION['user_id'], 
+                        $_SESSION['volunteer'], 
+                        $_SESSION['login_string'])) {
  
-                if (hash_equals($login_check, $login_string) ){
-                    // Logged In!!!! 
-                    return true;
-                } else {
-                    // Not logged in 
-                    return false;
-                }
-            } else {
-                // Not logged in 
-                return false;
-            }
-        } else {
+        $user_id = $_SESSION['user_id'];
+        $login_string = $_SESSION['login_string'];
+        $teamname = $_SESSION['volunteer'];
+ 
+        // Get the user-agent string of the user.
+        $user_browser = $_SERVER['HTTP_USER_AGENT'];
+         return true;
+    }
+
+
+    else{
             // Not logged in 
             return false;
         }
-    } else {
-        // Not logged in 
-        return false;
-    }
-}
+    } 
+    
+
 
 function esc_url($url) {
  

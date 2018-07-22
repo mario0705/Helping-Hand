@@ -3,7 +3,13 @@
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
+if (login_check($mysqli) == true) {
+$logged = 'in';
+} else {
+$logged = 'out';
+}
 ?>
+
 <html lang="en"><head>
     <title>Helping</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -147,7 +153,7 @@ include_once 'includes/psl-config.php';
 echo ' ';
 }
 elseif ($logged== "in"){
-echo ' <a class="nav-link waves-effect waves-light" href="redirect.php"><i class="fa fa-angle-right"></i> <span class="clearfix d-none d-sm-inline-block">Continue</span></a>';
+echo ' <a class="nav-link waves-effect waves-light" href="redirect.php"><i class="fa fa-angle-right"></i> <span class="clearfix d-none d-sm-inline-block">Home</span></a>';
 }
 ?>
 </li>
