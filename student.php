@@ -78,6 +78,7 @@ include("head.php")
             </div>
         </div>
     </div><br>
+    <center>
     <div class="col-md-6 row">
         <div class="card" style="width: 80%">
           <div class="header peach-gradient">
@@ -105,7 +106,7 @@ include("head.php")
             </div>  
           </div>
         </div>
-    </div>
+    </div></center>
     <!--Grid column-->
     <!--Grid column-->
     
