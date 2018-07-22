@@ -42,24 +42,76 @@ include("head.php")
 		<input type="text" id="date" class="form-control" name="date" placeholder="DD/MM/YY" style="width: 8em;">
 		</div>
 		<div class="col-md-6">
-		<div class="btn-group">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Subject</button>
+		
+ 
 
-    <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Computer Science</a>
-        				<a class="dropdown-item" href="#">Mathematics</a>
-        				<a class="dropdown-item" href="#">Physics</a>
-        				<a class="dropdown-item" href="#">Chemistry</a>
-        				<a class="dropdown-item" href="#">Biology</a>
-        				<a class="dropdown-item" href="#">Accounts</a>
-        				<a class="dropdown-item" href="#">History</a>
-        				<a class="dropdown-item" href="#">English</a>
-        				<a class="dropdown-item" href="#">Management</a>
-        				<a class="dropdown-item" href="#">Finance</a>
-        				<a class="dropdown-item" href="#">Electronics</a>
-       
-    </div>
-</div>
+        <div class="form-inline">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline4" value="computerscience">
+                <label class="form-check-label" for="exampleRadiosInline4">
+                    Computer Science
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline5" value="mathematics">
+                <label class="form-check-label" for="exampleRadiosInline5">
+                    Mathematics
+                </label>
+        </div>
+        <div class="form-check">
+                <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline6" value="physics">
+                    <label class="form-check-label" for="exampleRadiosInline6">
+                    Physics
+                    </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline7" value="chemistry">
+                <label class="form-check-label" for="exampleRadiosInline7">
+                    Chemistry
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline8" value="biology">
+                <label class="form-check-label" for="exampleRadiosInline8">
+                    Biology
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline9" value="accounts">
+                <label class="form-check-label" for="exampleRadiosInline9">
+                    Accounts
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline10" value="history">
+                <label class="form-check-label" for="exampleRadiosInline10">
+                    History
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline11" value="english">
+                <label class="form-check-label" for="exampleRadiosInline11">
+                    English
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline12" value="management">
+                <label class="form-check-label" for="exampleRadiosInline12">
+                    Management
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline13" value="finance">
+                <label class="form-check-label" for="exampleRadiosInline13">
+                    Finance
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline14" value="electronics">
+                <label class="form-check-label" for="exampleRadiosInline14">
+                    Electronics
+                </label>
+        </div>
 		</div>
 	</div>
 		  <!--Grid row-->

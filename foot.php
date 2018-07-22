@@ -34,11 +34,12 @@ z-index:9999999;}
 <!--/.Footer-->
 <!-- SCRIPTS -->
 <!-- JQuery -->
+<script type="text/javascript" src="2/bootstrap.js"></script>
+
 <script type="text/javascript" src="2/jquery-3.js"></script>
 <!-- Tooltips -->
 <script type="text/javascript" src="2/popper.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="2/bootstrap.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="2/mdb.js"></script>
 
