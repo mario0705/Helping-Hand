@@ -2,15 +2,20 @@
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
 sec_session_start();
+$status=$_SESSION['type'];
 if (login_check($mysqli) == true) {
-$logged = 'in';
-} else {
-$logged = 'out';
+  if ($status != "student") {
+                     # code...
+    header('Location: redirect.php');
+               
+               
 }
-$stmt = $mysqli->prepare("SELECT round FROM round WHERE id ='0'");
-$stmt->execute();
-$stmt->bind_result($round);
-$stmt->fetch();
+
+}
+else {
+  # code...
+  header('Location: redirect.php');
+}
 ?>
 <?php
 include("head.php")

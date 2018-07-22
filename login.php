@@ -7,7 +7,7 @@ $logged = 'in';
 } else {
 $logged = 'out';
 }
-$status =$_SESSION['type'];
+//$status =$_SESSION['type'];
   if ($status == "volunteer") {
                      # code...
                    header('Location: volunteer.php');
