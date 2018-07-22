@@ -24,8 +24,9 @@ include("head.php")
 <form>
 <!-- Card -->
 </center>
-	<div class="col-md-6 row">
-        <div class="card float-left" style="width: 50%;">
+<div class="row">
+	<div class="col-md-6 col-lg-5 mb-4">
+        <div class="card">
             <div class="card-body">
                	<form class="form-inline mr-auto">
 	    			<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"><br>
@@ -36,9 +37,9 @@ include("head.php")
         <!--/.Card-->
     </div><br>
     <!--Grid column-->
-    <div class="col-md-6 row">
+    <div class="col-md-7">
         <!--Card-->
-        <div class="card" style="width: 80%">
+        <div class="card">
           <div class="header peach-gradient">
             <div class="row d-flex justify-content-center">
                 <h3 class="white-text mb-0 py-5 font-weight-bold">Upload link</h3>
@@ -62,12 +63,13 @@ include("head.php")
         				<a class="dropdown-item" href="#">Finance</a>
         				<a class="dropdown-item" href="#">Electronics</a>
     				</div>
-				</div>
+				</div><br><br>
                <input type="text" placeholder="Add link...">&nbsp;<button style="cursor: pointer;" class="btn btn-cyan">Upload link</button>
             </div>
         </div>
         <!--/.Card-->
     </div>
+</div>
     <!--Grid column-->
     <!--Grid column-->
     
@@ -94,7 +96,18 @@ include("head.php")
             <div class="card-body mx-4">
                
             </div>
-        </div></center>
+        </div></center><br><br>
+<center>
+<div class="card" style="width: 80%">
+    <div class="header peach-gradient">
+        <div class="row d-flex justify-content-center">
+            <h3 class="white-text mb-0 py-5 font-weight-bold">NGO Request's</h3>
+        </div>
+    </div>
+    <div class="card-body mx-4">
+               
+    </div>
+</div></center>
 </form>
 <br>
 </main>
