@@ -116,18 +116,27 @@ include("head.php")
 
     <!--Grid column-->
     <div class="col-md-6">
+
         <!--Card-->
-        <div class="card float-right" style="width: 50%;">
+        <div class="card" style="width: 50%;">
+
+           
+
+           
+
             <div class="card-body">
                <form class="form-inline mr-auto">
     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"><br><br><br>
     <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">Search</button>
 </form> 
             </div>
+
         </div>
         <!--/.Card-->
+
     </div>
     <!--Grid column-->
+
 </div>
 <br><br>
 <!--Grid row-->
