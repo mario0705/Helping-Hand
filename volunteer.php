@@ -9,7 +9,6 @@ if (login_check($mysqli) == true) {
                      # code...
     header('Location: redirect.php');
           }
-
 }
 else {
   # code...
@@ -23,23 +22,27 @@ include("head.php")
 <main>
 <body>
 <form>
-  
-  
 <!-- Card -->
 </center>
- <div class="row">
-
+	<div class="col-md-6 row">
+        <div class="card float-left" style="width: 50%;">
+            <div class="card-body">
+               	<form class="form-inline mr-auto">
+	    			<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"><br>
+    				<button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">Search</button>
+				</form> 
+            </div>
+        </div>
+        <!--/.Card-->
+    </div><br>
     <!--Grid column-->
-    <div class="col-md-6">
-
+    <div class="col-md-6 row">
         <!--Card-->
         <div class="card" style="width: 80%">
           <div class="header peach-gradient">
-
             <div class="row d-flex justify-content-center">
                 <h3 class="white-text mb-0 py-5 font-weight-bold">Upload link</h3>
             </div>
-
         </div>
             <div class="card-body mx-4">
                <div class="btn-group">
@@ -64,37 +67,18 @@ include("head.php")
             </div>
         </div>
         <!--/.Card-->
-
     </div>
     <!--Grid column-->
-
     <!--Grid column-->
-    <div class="col-md-6">
-
-        <!--Card-->
-        <div class="card float-right" style="width: 50%;">
-            <div class="card-body">
-               <form class="form-inline mr-auto">
-    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"><br>
-    <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">Search</button>
-</form> 
-            </div>
-
-        </div>
-        <!--/.Card-->
-
-    </div>
+    
     <!--Grid column-->
-
-</div><br><br>
+<br><br>
 <center>
 <div class="card" style="width: 80%">
           <div class="header peach-gradient">
-
             <div class="row d-flex justify-content-center">
                 <h3 class="white-text mb-0 py-5 font-weight-bold">Questions for you</h3>
             </div>
-
         </div>
             <div class="card-body mx-4">
                
@@ -103,11 +87,9 @@ include("head.php")
 <center>
 <div class="card" style="width: 80%">
           <div class="header peach-gradient">
-
             <div class="row d-flex justify-content-center">
                 <h3 class="white-text mb-0 py-5 font-weight-bold">Uploaded link</h3>
             </div>
-
         </div>
             <div class="card-body mx-4">
                
