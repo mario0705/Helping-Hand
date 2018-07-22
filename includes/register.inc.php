@@ -277,11 +277,12 @@ elseif (isset($_POST['ngoname'], $_POST['coordinator'], $_POST['email'],$_POST['
         
     }
 }
-elseif (isset($_POST['volunteer'], $_POST['email'], $_POST['p'],$_POST['mobile'],$_POST['age'],$_POST['gender'])) {
+elseif (isset($_POST['volunteer'], $_POST['email'], $_POST['p'],$_POST['mobile'],$_POST['age'],$_POST['gender'],$_POST['city'])) {
     // Sanitize and validate the data passed in
     $volunteer = filter_input(INPUT_POST, 'volunteer', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $email = filter_var($email, FILTER_VALIDATE_EMAIL);
+    $city = filter_var($city, FILTER_VALIDATE_EMAIL);
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Not a valid email
         $error_msg .= '<p class="error">The email address you entered is not valid</p>';
@@ -397,7 +398,7 @@ elseif (isset($_POST['volunteer'], $_POST['email'], $_POST['p'],$_POST['mobile']
         //UPDATE `members` SET teamname='vraj', email= 'vraj.vup@gmail.com', password ='asdASD', levels= '2' WHERE mobile = '?';
  
         // Insert the new user into the database 
-        if ($insert_stmt = $mysqli->prepare("INSERT into volunteer SET volunteer='$volunteer', email='$email', password ='$password' ,mobile ='$mobile', age='$age', gender='$gender'")) {
+        if ($insert_stmt = $mysqli->prepare("INSERT into volunteer SET volunteer='$volunteer', email='$email', password ='$password' ,mobile ='$mobile', age='$age', gender='$gender' city='$city'")) {
             // Execute the prepared query.
             if ( $insert_stmt->execute()) {
                 

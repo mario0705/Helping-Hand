@@ -96,7 +96,7 @@ include("head.php")
         <!--/.Card content-->
     </div>
     <!--/.Card-->
-    
+    </div>
 </div>
 </main>
 <?php

@@ -188,6 +188,10 @@ color: #4f4f4f; }
                 <input type="text"  class="form-control"  name="age">
                 <label for="age">Your Age</label>
               </div>
+              <div class="md-form ">
+                <input type="text"  class="form-control"  name="city">
+                <label for="city">City</label>
+              </div>
               <!-- Form inline with radios -->
               <div class="form-inline">
     <div class="form-check">
