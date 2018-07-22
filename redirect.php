@@ -7,32 +7,25 @@ sec_session_start();
 <!DOCTYPE html>
 <html>
     <body>
-        <?php if (login_check($mysqli) == true) : ?>
-        <?php
-        $stmt = $mysqli->prepare("SELECT round FROM round WHERE id = '0'");
+        <?php 
+         $status=$_SESSION['type'];
+         echo $status;
+       if ($status == "volunteer") {
+       //  # code...
+       header('Location: volunteer.php');
+        }
+        else if ($status == "ngo") {
+        # code...
+        header('Location: ngo.php');
+        }
+        else if ($status == "student") {
+        # code...
+        header('Location: student.php');
+        }
+       else{
+        header('Location: login.php');
+
+       }        ?>
         
-        $stmt->execute();
-        $stmt->bind_result($round);
-        $stmt->fetch();
-        if ($round == "1") {
-        # code...
-        header('Location: round1/redirect.php');
-        }
-        else if ($round == "2") {
-        # code...
-        header('Location: round2/redirect.php');
-        }
-        else if ($round == "3") {
-        # code...
-        header('Location: round3/redirect.php');
-        }
-        else if ($round == "0") {
-        # code...
-        header('Location: roundover.php');
-        }
-        ?>
-        <?php else : ?>
-        <?php header("Location:level1.php"); ?>
-        <?php endif; ?>
     </body>
 </html>
