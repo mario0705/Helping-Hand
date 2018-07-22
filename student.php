@@ -118,7 +118,7 @@ include("head.php")
     <div class="col-md-6">
 
         <!--Card-->
-        <div class="card" style="width: 50%;">
+        <div class="card float-right" style="width: 50%;">
 
            
 
