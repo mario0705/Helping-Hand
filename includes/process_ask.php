@@ -32,6 +32,6 @@ if (isset($_POST['subject'],$_POST['question'])){
       $insert_stmt->execute();
          $insert_stmt->close();
      
-header('Location: ../student.php');
+header('Location: ../forum.php');
       
 }

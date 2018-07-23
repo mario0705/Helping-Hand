@@ -117,29 +117,110 @@ if (isset($_POST["qsearch"])) {
         </div>
     </div>
 
- <div id="aq" class="col-md-7 col-lg-12 mb-4">
-        <div class="card" ">
+ <<div class="col-md-7 col-lg-12 mb-4">
+        <div class="card">
           <div class="header peach-gradient">
             <div class="row d-flex justify-content-center">
                 <h3 class="white-text mb-0 py-5 font-weight-bold">Ask a Question</h3>
             </div>
           </div>
+          <form action="includes/process_ask.php" method="post">
           <div class="card-body mx-4">
-            <div class="md-form">
-              <i class="fa fa-tag prefix grey-text float-left"></i>
-              <input type="text" id="form106" class="form-control">
-              <label for="form106">Subject</label>
-            </div>
+            <div class="form-inline">
+                                    
+                                                <div class="form-check float-left">
+                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline4" value="computerscience">
+                                                    <label class="form-check-label" for="exampleRadiosInline4">
+                                                        Computer Science
+                                                    </label>
+                                                </div>
+                                            
+                                            <div class="form-check float-left">
+                                                <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline5" value="mathematics">
+                                                <label class="form-check-label" for="exampleRadiosInline5">
+                                                    Mathematics&emsp;&nbsp;
+                                                </label>
+                                            </div>
+                                            
+                                            
+                                                <div class="form-check float-left">
+                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline6" value="physics">
+                                                    <label class="form-check-label" for="exampleRadiosInline6">
+                                                        Physics
+                                                    </label>
+                                                </div>
+                                            
+                                        
+                                            
+                                                <div class="form-check float-left">
+                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline7" value="chemistry">
+                                                    <label class="form-check-label" for="exampleRadiosInline7">
+                                                        Chemistry&emsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;
+                                                    </label>
+                                                </div>
+                                            
+                                                <div class="form-check float-left">
+                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline8" value="biology">
+                                                    <label class="form-check-label" for="exampleRadiosInline8">
+                                                        Biology&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    </label>
+                                                </div>
+                                            
+                                                <div class="form-check float-left">
+                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline9" value="accounts">
+                                                    <label class="form-check-label" for="exampleRadiosInline9">
+                                                        Accounts
+                                                    </label>
+                                                </div>
+                                            
+                                                <div class="form-check float-left">
+                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline10" value="history">
+                                                    <label class="form-check-label" for="exampleRadiosInline10">
+                                                        History&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    </label>
+                                                </div>
+                                            
+                                                <div class="form-check float-left">
+                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline11" value="english">
+                                                    <label class="form-check-label" for="exampleRadiosInline11">
+                                                        English&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                                                    </label>
+                                                </div>
+                                            
+                                                <div class="form-check float-left">
+                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline12" value="management">
+                                                    <label class="form-check-label" for="exampleRadiosInline12">
+                                                        Management
+                                                    </label>
+                                                </div>
+                                            
+                                                <div class="form-check float-left">
+                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline13" value="finance">
+                                                    <label class="form-check-label" for="exampleRadiosInline13">
+                                                        Finance&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+                                                    </label>
+                                                </div>
+                                            
+                                                <div class="form-check float-left">
+                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline14" value="electronics">
+                                                    <label class="form-check-label" for="exampleRadiosInline14">
+                                                        Electronics
+                                                    </label>
+                                                </div>
+                                            
+                                </div>
+                            </div>
             <div class="md-form">
               <i class="fa fa-pencil prefix grey-text"></i>
-              <textarea type="text" id="form107" class="md-textarea form-control" rows="2"></textarea>
+              <textarea type="text" name="question" id="form107" class="md-textarea form-control" rows="2"></textarea>
               <label for="form107">Your message</label>
             </div>
             <div class="row d-flex align-items-center mb-3 mt-4">
               <div class="col-md-12">
                 <div class="text-center">
-                  <button type="button" class="btn btn-grey btn-rounded z-depth-1a">Send</button>
+                  <button  type="submit" class="btn btn-grey btn-rounded z-depth-1a">Send</button>
                 </div>
+              </form>
               </div>
             </div>  
           </div>
