@@ -398,7 +398,7 @@ elseif (isset($_POST['volunteer'], $_POST['email'], $_POST['p'],$_POST['mobile']
         //UPDATE `members` SET teamname='vraj', email= 'vraj.vup@gmail.com', password ='asdASD', levels= '2' WHERE mobile = '?';
  
         // Insert the new user into the database 
-        if ($insert_stmt = $mysqli->prepare("INSERT into volunteer SET volunteer='$volunteer', email='$email', password ='$password' ,mobile ='$mobile', age='$age', gender='$gender' city='$city'")) {
+        if ($insert_stmt = $mysqli->prepare("INSERT into volunteer SET volunteer='$volunteer', email='$email', password ='$password' ,mobile ='$mobile', age='$age', gender='$gender',city='$city'")) {
             // Execute the prepared query.
             if ( $insert_stmt->execute()) {
                 
