@@ -46,6 +46,7 @@ include("head.php")
                             $retval = mysqli_query($mysqli,$sql);
                             $row =mysqli_fetch_array($retval , MYSQLI_BOTH);
                             $jobs=$row['jobs'];
+                            $_SESSION['jobs'] =$jobs;
                             ?>
                             <label class="btn btn-unique btn-rounded btn-sm my-0">No. of sessions</label>
                             <h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <?php echo $jobs;?></h2>
@@ -59,20 +60,16 @@ include("head.php")
              <div class="col-md-6 col-lg-3 mb-3">
                 <div class="card">
                     <div class="card-body">
-                        <center><button style="cursor: pointer;" type="submit" class="btn btn-cyan">Generate certificate</button></center>
-                        <!-- <form class="form mr-auto"> -->
+                        <center>
                             <?php
-                            // $volunteer=$_SESSION['volunteer'];
-                            // $sql = "SELECT jobs from volunteer WHERE volunteer='$volunteer'";
-                            // mysqli_select_db($mysqli,'secure_login');
-                            // $retval = mysqli_query($mysqli,$sql);
-                            // $row =mysqli_fetch_array($retval , MYSQLI_BOTH);
-                            // $jobs=$row['jobs'];
-                            ?>
-                            <!-- <label class="btn btn-unique btn-rounded btn-sm my-0">No. of sessions</label>
-                            <h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <?php echo $jobs;?></h2> -->
-                            
-                        <!-- </form> -->
+                            if ($jobs < '5') {
+                                # code... 
+                                echo '<button style="cursor: pointer; " type="submit" class="btn btn-cyan disabled">Generate certificate</button></center>';
+                            }
+                           else {
+                            echo "<button style=\"cursor: pointer; \" type=\"submit\" class=\"btn btn-cyan \" onclick=\"window.location.href='./certificate.php'\">Generate certificate</button></center>";
+                           }
+                       ?>
                     </div>
                 </div>
                 <!--/.Card-->
@@ -300,7 +297,7 @@ include("head.php")
                     <div class="container-fluid text-center">
                         <!--Card-->
                         <!--Card image-->
-                        <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="" style="visibility: visible; animation-name: fadeIn;">
                             <h4 style="padding-top: 2%; color: #E3468C;"><strong></strong></h4>
                             <?php
                             $volunteer=$_SESSION['volunteer'];
@@ -320,9 +317,7 @@ include("head.php")
                             <div class="table-responsive" style="padding-top: 2%;">
                                 <table class=" table table-striped" border="1" style="width: 100%;" align="center">
                                     <tr>
-                                        <td class="table-dark">
-                                            No.
-                                        </td>
+                                       
                                         <td class="table-dark">
                                             Date
                                         </td>
@@ -345,9 +340,7 @@ include("head.php")
                                     {
                                     ?>
                                     <tr>
-                                        <td>
-                                            <?php echo $i; ?>
-                                        </td>
+                                        
                                         <td>
                                             <?php echo "" .$row["date"]; ?>
                                         </td>
