@@ -55,7 +55,7 @@ include("head.php")
                 <!--/.Card-->
             </div>
             <!--Grid column-->
-            
+           </div> 
             <div class="col-md-7 col-lg-12 mb-4">
                 <!--Card-->
                 
@@ -197,11 +197,12 @@ include("head.php")
                 <div class="card-body mx-4">
                 </div>
             </div> --></center><br><br>
-            <center>
-                <div class="col-md-7 col-lg-12 mb-4">
+            
+    <div class="row">
+        <div class="col-md-6 col-lg-6 mb-4">
             <div class="card">
                 <div class="header peach-gradient">
-                    <div class="row d-flex justify-content-center">
+                    <div class="d-flex justify-content-center">
                         <h3 class="white-text mb-0 py-5 font-weight-bold">Uploaded link</h3>
                     </div>
                 </div>
@@ -273,6 +274,87 @@ include("head.php")
                                 </table>
                                 <div class="mask waves-effect waves-light"></div>
                             </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-6 col-lg-6 mb-4">
+            <div class="card">
+                <div class="header peach-gradient">
+                    <div class="d-flex justify-content-center">
+                        <h3 class="white-text mb-0 py-5 font-weight-bold">Uploaded link</h3>
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <!--Title-->
+                    <div class="container-fluid text-center">
+                        <!--Card-->
+                        <!--Card image-->
+                        <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <h4 style="padding-top: 2%; color: #E3468C;"><strong></strong></h4>
+                            <?php
+                            $volunteer=$_SESSION['volunteer'];
+                            $sql = "SELECT date,subject,link,materialdesc FROM material where volunteer='$volunteer'";
+                            mysqli_select_db($mysqli,'secure_login');
+                            $retval = mysqli_query($mysqli,$sql);
+                            if(! $retval)
+                            {
+                            die('Could not get data :'.mysqli_error());
+                            }
+                            ?>
+                            <style type="text/css">
+                            .table-dark{
+                            background-color: #82B6AD;
+                            }
+                            </style>
+                            <!-- <div style="padding-top: 2%;">
+                                <table class=" table table-striped" border="1" style="width: 90%;" align="center">
+                                    <tr>
+                                        <td class="table-dark">
+                                            No.
+                                        </td>
+                                        <td class="table-dark">
+                                            Date
+                                        </td>
+                                        <td class="table-dark">
+                                            Subject
+                                        </td>
+                                        <td class="table-dark">
+                                            Material Description
+                                        </td>
+                                        <td class="table-dark">
+                                            link
+                                        </td>
+                                    </tr> -->
+                                    <?php $i=1;
+                                    while($row =mysqli_fetch_array($retval , MYSQLI_BOTH))
+                                    {
+                                    ?>
+                                    <tr>
+                                        <td>
+                                            <?php echo $i; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo "" .$row["date"]; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo "" .$row["subject"]; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo "" .$row["materialdesc"]; ?>
+                                        </td>
+                                        <td >
+                                            <form action="https://<?php echo $row["link"]?>" method="get">
+                                                <button style="z-index: 2;" value="" class="btn btn-cyan" type="submit">Open Link</button>
+                                            </td>
+                                        </form>
+                                    </tr>
+                                    <?php $i++;} ?>
+                                </table>
+                                <div class="mask waves-effect waves-light"></div>
+                            </a>
                         </div>
                         <!--/Card image-->
                         <!--Card content-->
@@ -282,12 +364,12 @@ include("head.php")
                     <!--/.Card-->
                 </div>
             </div>
-        
+      </div>  
 
-</center>
+
 <br>
 <br>
-    <center>
+    
         <div class="col-md-7 col-lg-12 mb-4">
     <div class="card" >
         <div class="header peach-gradient">
@@ -385,7 +467,7 @@ include("head.php")
 </div>
 <!--/.Card-->
 </div>
-</div></center>
+</div>
 <!-- <div style="width:800px; height:600px; padding:20px; text-align:center; border: 10px solid #787878">
 <div style="width:750px; height:550px; padding:20px; text-align:center; border: 5px solid #787878">
 <span style="font-size:50px; font-weight:bold">Certificate of Completion</span>
