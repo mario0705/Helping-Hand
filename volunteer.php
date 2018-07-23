@@ -379,7 +379,7 @@ include("head.php")
                                         </form>
                                     </tr>
                                     <?php $i++;} ?>
-                                </table>
+                                </table></div>
                                 <div class="mask waves-effect waves-light"></div>
                             </a>
                         </div>
