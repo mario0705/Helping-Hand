@@ -149,7 +149,7 @@ include("head.php")
 
             </div>
             <!--/.Card-->
-
+</form>
         </div>
         <!-- Grid column -->
 
@@ -178,7 +178,7 @@ include("head.php")
                 <?php
                 $ngoname=$_SESSION['ngoname'];
                 
-                $sql = "SELECT date,subject,address,flag FROM requests where ngoname='$ngoname'";
+                $sql = "SELECT date,subject,address,flag,volunteer FROM requests where ngoname='$ngoname'";
                 mysqli_select_db($mysqli,'secure_login');
                 $retval = mysqli_query($mysqli,$sql);
                 if(! $retval)
@@ -209,6 +209,9 @@ include("head.php")
                             </td>
                             <td class="table-dark">
                                 status
+                            </td>
+                            <td class="table-dark">
+                                Volunteer
                             </td>
                         </tr>
                         <?php $i=1;
@@ -241,6 +244,9 @@ include("head.php")
                                 }
                                 echo $staus; 
                                 ?>
+                            </td>
+                            <td>
+                                <?php echo "" .$row["volunteer"]; ?>
                             </td>
                             
                             
@@ -292,7 +298,7 @@ include("head.php")
                 <?php
                 $ngoname=$_SESSION['ngoname'];
                 
-                $sql = "SELECT id,date,subject,address,flag FROM requests where ngoname='$ngoname'";
+                $sql = "SELECT id,date,subject,address,flag,volunteer FROM requests where ngoname='$ngoname' and flag='1'";
                 mysqli_select_db($mysqli,'secure_login');
                 $retval = mysqli_query($mysqli,$sql);
                 if(! $retval)
@@ -309,9 +315,7 @@ include("head.php")
                     <table class=" table table-striped" border="1" style="width: 90%;" align="center">
                         
                         <tr >
-                            <td class="table-dark">
-                                No.
-                            </td>
+                            
                             <td class="table-dark">
                                 Date
                             </td>
@@ -330,9 +334,7 @@ include("head.php")
                         {
                         ?>
                         <tr>
-                            <td>
-                                <?php echo $i; ?>
-                            </td>
+                            
                             <td>
                                 <?php echo "" .$row["date"]; ?>
                             </td>
@@ -340,10 +342,13 @@ include("head.php")
                                 <?php echo "" .$row["subject"]; ?>
                             </td>
                             <td>
-                                <?php echo "" .$row["address"]; ?>
+                                <?php echo "" .$row["volunteer"]; ?>
                             </td>
                             <td>
-                                <button onclick=""></button>
+                                <form action="includes/process_approve.php" method="post">
+                                    <input type="hidden" value="<?php echo $row["id"]?>" name="id">
+                                <button style="z-index: 2;" value="" class="btn btn-cyan" type="submit">Approve</button>
+                            </form>
                             </td>
                             
                             
