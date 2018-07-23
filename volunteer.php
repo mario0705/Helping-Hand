@@ -56,9 +56,9 @@ include("head.php")
             </div>
             <!--Grid column-->
             
-            <div class="col-md-7 col-lg-10 mb-4">
+            <div class="col-md-7 col-lg-12 mb-4">
                 <!--Card-->
-                <center>
+                
                 <div class="card">
                     <div class="header peach-gradient">
                         <div class="row d-flex justify-content-center">
@@ -178,7 +178,7 @@ include("head.php")
                         </form>
                     </div>
                 </div>
-                </center>
+                
                 <!--/.Card-->
             </div>
             <!-- </div> -->
@@ -187,8 +187,8 @@ include("head.php")
             <!--Grid column-->
             <br><br>
             <center>
-                
-            <div class="card" style="width: 80%">
+
+            <!-- <div class="card" style="width: 80%">
                 <div class="header peach-gradient">
                     <div class="row d-flex justify-content-center">
                         <h3 class="white-text mb-0 py-5 font-weight-bold">Questions for you</h3>
@@ -196,9 +196,10 @@ include("head.php")
                 </div>
                 <div class="card-body mx-4">
                 </div>
-            </div></center><br><br>
+            </div> --></center><br><br>
             <center>
-            <div class="card" style="width: 80%">
+                <div class="col-md-7 col-lg-12 mb-4">
+            <div class="card">
                 <div class="header peach-gradient">
                     <div class="row d-flex justify-content-center">
                         <h3 class="white-text mb-0 py-5 font-weight-bold">Uploaded link</h3>
@@ -228,7 +229,7 @@ include("head.php")
                             </style>
                             <div style="padding-top: 2%;">
                                 <table class=" table table-striped" border="1" style="width: 90%;" align="center">
-                                    <tr >
+                                    <tr>
                                         <td class="table-dark">
                                             No.
                                         </td>
@@ -277,13 +278,18 @@ include("head.php")
                         <!--Card content-->
                         <!--/.Card content-->
                     </div>
+
                     <!--/.Card-->
                 </div>
             </div>
-        </div>
-    </div></center><br><br>
+        
+
+</center>
+<br>
+<br>
     <center>
-    <div class="card" style="width: 80%">
+        <div class="col-md-7 col-lg-12 mb-4">
+    <div class="card" >
         <div class="header peach-gradient">
             <div class="row d-flex justify-content-center">
                 <h3 class="white-text mb-0 py-5 font-weight-bold">Volunteering Vancancy</h3>
@@ -372,6 +378,7 @@ include("head.php")
         <!--Card content-->
         <!--/.Card content-->
     </div>
+</div>
     <!--/.Card-->
 </div>
 </div>
