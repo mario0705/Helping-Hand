@@ -124,90 +124,12 @@ if (isset($_POST["qsearch"])) {
                 <h3 class="white-text mb-0 py-5 font-weight-bold">Ask a Question</h3>
             </div>
           </div>
-         <div class="form-inline">
-                                    
-                                                <div class="form-check float-left">
-                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline4" value="computerscience">
-                                                    <label class="form-check-label" for="exampleRadiosInline4">
-                                                        Computer Science
-                                                    </label>
-                                                </div>
-                                            
-                                            <div class="form-check float-left">
-                                                <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline5" value="mathematics">
-                                                <label class="form-check-label" for="exampleRadiosInline5">
-                                                    Mathematics&emsp;&nbsp;
-                                                </label>
-                                            </div>
-                                            
-                                            
-                                                <div class="form-check float-left">
-                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline6" value="physics">
-                                                    <label class="form-check-label" for="exampleRadiosInline6">
-                                                        Physics
-                                                    </label>
-                                                </div>
-                                            
-                                        
-                                            
-                                                <div class="form-check float-left">
-                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline7" value="chemistry">
-                                                    <label class="form-check-label" for="exampleRadiosInline7">
-                                                        Chemistry&emsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;
-                                                    </label>
-                                                </div>
-                                            
-                                                <div class="form-check float-left">
-                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline8" value="biology">
-                                                    <label class="form-check-label" for="exampleRadiosInline8">
-                                                        Biology&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    </label>
-                                                </div>
-                                            
-                                                <div class="form-check float-left">
-                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline9" value="accounts">
-                                                    <label class="form-check-label" for="exampleRadiosInline9">
-                                                        Accounts
-                                                    </label>
-                                                </div>
-                                            
-                                                <div class="form-check float-left">
-                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline10" value="history">
-                                                    <label class="form-check-label" for="exampleRadiosInline10">
-                                                        History&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    </label>
-                                                </div>
-                                            
-                                                <div class="form-check float-left">
-                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline11" value="english">
-                                                    <label class="form-check-label" for="exampleRadiosInline11">
-                                                        English&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
-                                                    </label>
-                                                </div>
-                                            
-                                                <div class="form-check float-left">
-                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline12" value="management">
-                                                    <label class="form-check-label" for="exampleRadiosInline12">
-                                                        Management
-                                                    </label>
-                                                </div>
-                                            
-                                                <div class="form-check float-left">
-                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline13" value="finance">
-                                                    <label class="form-check-label" for="exampleRadiosInline13">
-                                                        Finance&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
-                                                    </label>
-                                                </div>
-                                            
-                                                <div class="form-check float-left">
-                                                    <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline14" value="electronics">
-                                                    <label class="form-check-label" for="exampleRadiosInline14">
-                                                        Electronics
-                                                    </label>
-                                                </div>
-                                            
-                                </div>
-                            </div>
+          <div class="card-body mx-4">
+            <div class="md-form">
+              <i class="fa fa-tag prefix grey-text float-left"></i>
+              <input type="text" id="form106" class="form-control">
+              <label for="form106">Subject</label>
+            </div>
             <div class="md-form">
               <i class="fa fa-pencil prefix grey-text"></i>
               <textarea type="text" id="form107" class="md-textarea form-control" rows="2"></textarea>
@@ -321,28 +243,7 @@ if (isset($_POST["qsearch"])) {
                         <!--/.Card content-->
                     </div>
 
-                    <div class="row">
-    <div class="col-sm-4 col-lg-3">
-        <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column mt-4">
-            <a class="navbar-brand" href="#">Recent Questions</a>
-            <nav class="nav nav-pills flex-column">
-                <a class="nav-link active" href="#item-1">Question 1</a>
-                <a class="nav-link" href="#item-2">Question 2</a>
-                <a class="nav-link" href="#item-3">Question 3</a>
-            </nav>
-        </nav>
-    </div>
-    <div class="col-sm-8 col-lg-9">
-        <div data-spy="scroll" class="scrollspy-example z-depth-1 mt-4" data-target="#navbar-example3" data-offset="0">
-            <h4 id="item-1">Question 1</h4>
-            <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
-            <h4 id="item-2">Question 2</h4>
-            <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
-            <h4 id="item-3">Question 3</h4>
-            <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
-        </div>
-    </div>
-</div>
+                    
 
 
 

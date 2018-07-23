@@ -235,8 +235,8 @@ include("head.php")
     </div>
     <div class="col-sm-8 col-lg-9">
         <div data-spy="scroll" class="scrollspy-example z-depth-1 mt-4" data-target="#navbar-example3" data-offset="0">
-           <form>
-            <input type="hidden" name="id" action="forum.php" method="get" value="<?php $id=$row['id'];
+           <form action="forum.php" method="get">
+            <input type="hidden" name="id"  value="<?php $id=$row['id'];
              echo $id; ?>">
            <?php 
 

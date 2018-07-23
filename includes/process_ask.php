@@ -26,9 +26,7 @@ if (isset($_POST['subject'],$_POST['question'])){
 	// echo $id;
    $student=$_SESSION['teamname'];
 
-	  //     $insert_stmt = $mysqli->prepare("UPDATE requests SET flag='2' WHERE id='$id'");
-			// $insert_stmt->execute();
-   //       $insert_stmt->close();
+	 
         
                 $insert_stmt = $mysqli->prepare("INSERT INTO question set question='$question',subject='$subject', student='$student'");
       $insert_stmt->execute();
