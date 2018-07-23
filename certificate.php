@@ -41,7 +41,8 @@ include("head.php")
       #set ($dt = $DateFormatter.getFormattedDate($grade.getAwardDate(), "MMMM dd, yyyy"))
       <span style="font-size:30px">$dt</span> -->
 </div>
-</div>
+</div><br>
+<button style="cursor: pointer;" type="submit" class="btn btn-cyan">Print</button>
 <!-- </div> -->
 </form>
 <br>
