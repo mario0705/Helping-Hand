@@ -26,10 +26,11 @@ include("head.php")
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card">
                     <div class="card-body">
-                        <form class="form-inline mr-auto">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"><br>
-                            <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">Search</button>
-                        </form>
+                        <form method="get" action="material.php" class="form-inline mr-auto">
+
+                  <input class="form-control mr-sm-4" type="text" name ="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">Search  </button>
+                </form>
                     </div>
                 </div>
                 <!--/.Card-->
@@ -229,7 +230,7 @@ include("head.php")
                             }
                             </style>
                             <div style="padding-top: 2%;">
-                                <table class=" table table-striped" border="1" style="width: 90%;" align="center">
+                                <table class=" table table-striped" border="1" style="width: 100%;" align="center">
                                     <tr>
                                         <td class="table-dark">
                                             No.
@@ -284,7 +285,7 @@ include("head.php")
             <div class="card">
                 <div class="header peach-gradient">
                     <div class="d-flex justify-content-center">
-                        <h3 class="white-text mb-0 py-5 font-weight-bold">Uploaded link</h3>
+                        <h3 class="white-text mb-0 py-5 font-weight-bold">Upcoming Sessions</h3>
                     </div>
                 </div>
                 <div class="card-body text-center">
@@ -296,7 +297,7 @@ include("head.php")
                             <h4 style="padding-top: 2%; color: #E3468C;"><strong></strong></h4>
                             <?php
                             $volunteer=$_SESSION['volunteer'];
-                            $sql = "SELECT date,subject,link,materialdesc FROM material where volunteer='$volunteer'";
+                            $sql = "SELECT date,from1,till,address,subject,id FROM requests where volunteer='$volunteer'";
                             mysqli_select_db($mysqli,'secure_login');
                             $retval = mysqli_query($mysqli,$sql);
                             if(! $retval)
@@ -309,8 +310,8 @@ include("head.php")
                             background-color: #82B6AD;
                             }
                             </style>
-                            <!-- <div style="padding-top: 2%;">
-                                <table class=" table table-striped" border="1" style="width: 90%;" align="center">
+                            <div class="table-responsive" style="padding-top: 2%;">
+                                <table class=" table table-striped" border="1" style="width: 100%;" align="center">
                                     <tr>
                                         <td class="table-dark">
                                             No.
@@ -322,12 +323,16 @@ include("head.php")
                                             Subject
                                         </td>
                                         <td class="table-dark">
-                                            Material Description
+                                           Address
                                         </td>
                                         <td class="table-dark">
-                                            link
+                                            From
+                                        </td><td class="table-dark">
+                                            Till
+                                        </td><td class="table-dark">
+                                            Action
                                         </td>
-                                    </tr> -->
+                                    </tr>
                                     <?php $i=1;
                                     while($row =mysqli_fetch_array($retval , MYSQLI_BOTH))
                                     {
@@ -343,12 +348,34 @@ include("head.php")
                                             <?php echo "" .$row["subject"]; ?>
                                         </td>
                                         <td>
-                                            <?php echo "" .$row["materialdesc"]; ?>
+                                            <?php echo "" .$row["address"]; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo "" .$row["from1"]; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo "" .$row["till"]; ?>
                                         </td>
                                         <td >
-                                            <form action="https://<?php echo $row["link"]?>" method="get">
-                                                <button style="z-index: 2;" value="" class="btn btn-cyan" type="submit">Open Link</button>
+                                            <form action="volunteer.php" method="post">
+                                                <input type="hidden" value="<?php echo $row["id"]?>" name="id">
+                                                <button style="z-index: 2;" value="" class="btn btn-cyan" type="submit">cancel</button>
                                             </td>
+                                            <?php
+                                            if (isset($_POST['id'])){
+    
+     $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING);
+     
+        $volunteer="not alloted";
+          $insert_stmt = $mysqli->prepare("UPDATE requests SET flag='0', volunteer='$volunteer' WHERE id='$id'");
+            $insert_stmt->execute();
+         $insert_stmt->close();
+       
+
+
+      
+}
+                                            ?>
                                         </form>
                                     </tr>
                                     <?php $i++;} ?>
@@ -381,7 +408,7 @@ include("head.php")
             <div class="container-fluid text-center">
                 <!--Card-->
                 <!--Card image-->
-                <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                <div class="" style="visibility: visible; animation-name: fadeIn;">
                     <h4 style="padding-top: 2%; color: #E3468C;"><strong></strong></h4>
                     <?php
                     $volunteer=$_SESSION['volunteer'];
@@ -398,8 +425,8 @@ include("head.php")
                     background-color: #82B6AD;
                     }
                     </style>
-                    <div style="padding-top: 2%;">
-                        <table class=" table table-striped" border="1" style="width: 90%;" align="center">
+                    <div style="padding-top: 2%; z-index: 3;" class="table-responsive" >
+                        <table class=" table table-striped" border="1" style="width: 100%;" align="center">
                             <tr >
                                 <td class="table-dark">
                                     No.
