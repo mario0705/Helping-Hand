@@ -98,7 +98,7 @@ if (isset($_POST["search"])) {
             <div class="card-body">
                 <form method="get" action="material.php" class="form-inline mr-auto">
 
-                  <input class="form-control mr-sm-4" type="text" name ="search" placeholder="Search" aria-label="Search">
+                  <input class="form-control mr-sm-4" type="text" name ="search" placeholder="Search material" aria-label="Search">
                   <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">Search  </button>
                 </form> 
             </div>
@@ -125,7 +125,7 @@ if (isset($_POST["search"])) {
                     <div class="container-fluid text-center">
                         <!--Card-->
                         <!--Card image-->
-                        <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="" style="visibility: visible; animation-name: fadeIn;">
                             <h4 style="padding-top: 2%; color: #E3468C;"><strong></strong></h4>
                             <?php
                             if (isset($_GET["search"])) {
@@ -151,7 +151,7 @@ if (isset($_POST["search"])) {
                             background-color: #82B6AD;
                             }
                             </style>
-                            <div style="padding-top: 2%;">
+                            <div style="padding-top: 2%;" class="table-responsive">
                                 <table class=" table table-striped" border="1" style="width: 90%;" align="center">
                                     <tr>
                                         <td class="table-dark">

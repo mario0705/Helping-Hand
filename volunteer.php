@@ -204,7 +204,7 @@ include("head.php")
              </div> --><!-- </center> --><br><br>
             
     <div class="row">
-        <div class="col-md-6 col-lg-6 mb-4">
+        <div class="col-md-6 col-lg-5.5 mb-4">
             <div class="card">
                 <div class="header peach-gradient">
                     <div class="d-flex justify-content-center">
@@ -357,25 +357,13 @@ include("head.php")
                                             <?php echo "" .$row["till"]; ?>
                                         </td>
                                         <td >
-                                            <form action="volunteer.php" method="post">
+                                            <form action="includes/process_select.php" method="post">
                                                 <input type="hidden" value="<?php echo $row["id"]?>" name="id">
-                                                <button style="z-index: 2;" value="" class="btn btn-cyan" type="submit">cancel</button>
+                                                <input type="hidden" value="cancel" name="cancel">
+
+                                                <button style="z-index: 2;" value="" class="btn btn-cyan" type="submit">Cancel</button>
                                              </form></td>
-                                            <?php
-                                            if (isset($_POST['id'])){
-    
-     $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING);
-     
-        $volunteer="not alloted";
-          $insert_stmt = $mysqli->prepare("UPDATE requests SET flag='0', volunteer='$volunteer' WHERE id='$id'");
-            $insert_stmt->execute();
-         $insert_stmt->close();
-       
-
-
-      
-}
-                                            ?>
+                                           
                                        
                                     </tr>
                                     <?php $i++;} ?>

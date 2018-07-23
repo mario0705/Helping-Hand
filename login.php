@@ -7,6 +7,10 @@ $logged = 'in';
 } else {
 $logged = 'out';
 }
+if ($_SESSION['type'] == '')
+{
+    $status="";
+}
 $status =$_SESSION['type'];
   if ($status == "volunteer") {
                      # code...
@@ -20,6 +24,7 @@ $status =$_SESSION['type'];
                      # code...
                    header('Location: student.php');
                  }
+                 
 ?>
 <?php
 include("head.php")

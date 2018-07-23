@@ -18,8 +18,22 @@ else {
   # code...
   header('Location: redirect.php');
 }
+ 
+   if (isset($_POST['id'],$_POST['cancel'])){
+    
+     $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING);
+     
+        $volunteer="not alloted";
+          $insert_stmt = $mysqli->prepare("UPDATE requests SET flag='0', volunteer='$volunteer' WHERE id='$id'");
+            $insert_stmt->execute();
+         $insert_stmt->close();
+       
+header('Location: ../volunteer.php');
 
-if (isset($_POST['id'])){
+      
+}
+                                            
+elseif (isset($_POST['id'])){
 	
 	 $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING);
 	 echo $id;
@@ -29,6 +43,6 @@ if (isset($_POST['id'])){
          $insert_stmt->close();
        
 
-header('Location: ../ngo.php');
+header('Location: ../volunteer.php');
       
 }

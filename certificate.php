@@ -25,7 +25,7 @@ $jobs=$_SESSION['jobs'];
 <body onload="myFunction()">
 	<script>
 function myFunction() {
-   /// window.print();
+    window.print();
 }
 </script>
 <form>
@@ -51,12 +51,6 @@ function myFunction() {
        <span style="font-size:30px"><b><?php echo $name; ?></b></span><br/><br/>
        <span style="font-size:25px"><i>has completed the required task</i></span> <br/><br/>
        <span style="font-size:30px"><?php echo $jobs; ?></span> <br/><br/><br>
-   
-       <!-- <img src="assets/image/logo.png" height="25%"> -->
-        <!-- <span style="font-size:20px">with score of <b>$grade.getPoints()%</b></span> <br/><br/><br/><br/> -->
-       <!-- <span style="font-size:25px"><i>dated</i></span><br>
-      #set ($dt = $DateFormatter.getFormattedDate($grade.getAwardDate(), "MMMM dd, yyyy"))
-      <span style="font-size:30px">$dt</span> -->
 </div>
 </div>
 
