@@ -55,8 +55,31 @@ include("head.php")
                 </div>
                 <!--/.Card-->
             </div>
+            
+             <div class="col-md-6 col-lg-3 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <center><button style="cursor: pointer;" type="submit" class="btn btn-cyan">Generate certificate</button></center>
+                        <!-- <form class="form mr-auto"> -->
+                            <?php
+                            // $volunteer=$_SESSION['volunteer'];
+                            // $sql = "SELECT jobs from volunteer WHERE volunteer='$volunteer'";
+                            // mysqli_select_db($mysqli,'secure_login');
+                            // $retval = mysqli_query($mysqli,$sql);
+                            // $row =mysqli_fetch_array($retval , MYSQLI_BOTH);
+                            // $jobs=$row['jobs'];
+                            ?>
+                            <!-- <label class="btn btn-unique btn-rounded btn-sm my-0">No. of sessions</label>
+                            <h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <?php echo $jobs;?></h2> -->
+                            
+                        <!-- </form> -->
+                    </div>
+                </div>
+                <!--/.Card-->
+            </div>
             <!--Grid column-->
            </div> 
+
             <div class="col-md-7 col-lg-12 mb-4">
                 <!--Card-->
                 
@@ -72,103 +95,87 @@ include("head.php")
                             <form method="post" action="includes/process_submat.php" >
                                 
                                 <div class="form-inline">
-                                    <table>
-                                        <tr>
-                                            <td colspan="2" >
+                                    
                                                 <div class="form-check float-left">
                                                     <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline4" value="computerscience">
                                                     <label class="form-check-label" for="exampleRadiosInline4">
                                                         Computer Science
                                                     </label>
                                                 </div>
-                                            </td>
-                                            <td colspan="2" ><div class="form-check float-left">
+                                            
+                                            <div class="form-check float-left">
                                                 <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline5" value="mathematics">
                                                 <label class="form-check-label" for="exampleRadiosInline5">
-                                                    Mathematics
+                                                    Mathematics&emsp;&nbsp;
                                                 </label>
                                             </div>
                                             
-                                            <td colspan="2" >
+                                            
                                                 <div class="form-check float-left">
                                                     <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline6" value="physics">
                                                     <label class="form-check-label" for="exampleRadiosInline6">
                                                         Physics
                                                     </label>
                                                 </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2" >
+                                            
+                                        
+                                            
                                                 <div class="form-check float-left">
                                                     <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline7" value="chemistry">
                                                     <label class="form-check-label" for="exampleRadiosInline7">
-                                                        Chemistry
+                                                        Chemistry&emsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;
                                                     </label>
                                                 </div>
-                                            </td>
-                                            <td colspan="2" >
+                                            
                                                 <div class="form-check float-left">
                                                     <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline8" value="biology">
                                                     <label class="form-check-label" for="exampleRadiosInline8">
-                                                        Biology
+                                                        Biology&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                     </label>
                                                 </div>
-                                            </td>
-                                            <td colspan="2" >
+                                            
                                                 <div class="form-check float-left">
                                                     <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline9" value="accounts">
                                                     <label class="form-check-label" for="exampleRadiosInline9">
                                                         Accounts
                                                     </label>
                                                 </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2" >
+                                            
                                                 <div class="form-check float-left">
                                                     <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline10" value="history">
                                                     <label class="form-check-label" for="exampleRadiosInline10">
-                                                        History
+                                                        History&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                     </label>
                                                 </div>
-                                            </td>
-                                            <td colspan="2" >
+                                            
                                                 <div class="form-check float-left">
                                                     <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline11" value="english">
                                                     <label class="form-check-label" for="exampleRadiosInline11">
-                                                        English
+                                                        English&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
                                                     </label>
                                                 </div>
-                                            </td>
-                                            <td colspan="2" >
+                                            
                                                 <div class="form-check float-left">
                                                     <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline12" value="management">
                                                     <label class="form-check-label" for="exampleRadiosInline12">
                                                         Management
                                                     </label>
                                                 </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2" >
+                                            
                                                 <div class="form-check float-left">
                                                     <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline13" value="finance">
                                                     <label class="form-check-label" for="exampleRadiosInline13">
-                                                        Finance
+                                                        Finance&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
                                                     </label>
                                                 </div>
-                                            </td>
-                                            <td colspan="2" >
+                                            
                                                 <div class="form-check float-left">
                                                     <input class="form-check-input" type="radio" name="subject" id="exampleRadiosInline14" value="electronics">
                                                     <label class="form-check-label" for="exampleRadiosInline14">
                                                         Electronics
                                                     </label>
                                                 </div>
-                                            </td>
-                                        </tr>
-                                    </table>
+                                            
                                 </div>
                             </div>
                             <br>
@@ -187,7 +194,7 @@ include("head.php")
             <!--Grid column-->
             <!--Grid column-->
             <br><br>
-            <center>
+            <!-- <center> -->
 
             <!-- <div class="card" style="width: 80%">
                 <div class="header peach-gradient">
@@ -197,7 +204,7 @@ include("head.php")
                 </div>
                 <div class="card-body mx-4">
                 </div>
-            </div> --></center><br><br>
+             </div> --><!-- </center> --><br><br>
             
     <div class="row">
         <div class="col-md-6 col-lg-6 mb-4">
@@ -360,7 +367,7 @@ include("head.php")
                                             <form action="volunteer.php" method="post">
                                                 <input type="hidden" value="<?php echo $row["id"]?>" name="id">
                                                 <button style="z-index: 2;" value="" class="btn btn-cyan" type="submit">cancel</button>
-                                            </td>
+                                             </form></td>
                                             <?php
                                             if (isset($_POST['id'])){
     
@@ -376,10 +383,10 @@ include("head.php")
       
 }
                                             ?>
-                                        </form>
+                                       
                                     </tr>
                                     <?php $i++;} ?>
-                                </table>
+                                </table></div>
                                 <div class="mask waves-effect waves-light"></div>
                             </a>
                         </div>
@@ -397,11 +404,11 @@ include("head.php")
 <br>
 <br>
     
-        <div class="col-md-7 col-lg-12 mb-4">
+        <div class="col-md- col-lg-12 mb-4">
     <div class="card" >
         <div class="header peach-gradient">
             <div class="row d-flex justify-content-center">
-                <h3 class="white-text mb-0 py-5 font-weight-bold">Volunteering Vancancy</h3>
+                <h3 class="white-text mb-0 py-5 font-weight-bold">Volunteering Vacancy</h3>
             </div>
         </div>
         <div class="card-body mx-4">
