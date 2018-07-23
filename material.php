@@ -4,7 +4,7 @@ include_once 'includes/functions.php';
 sec_session_start();
 $status=$_SESSION['type'];
 if (login_check($mysqli) == true) {
-  if ($status != "student") {
+  if ($status == "ngo") {
                      # code...
     header('Location: redirect.php');
                
