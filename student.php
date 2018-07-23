@@ -76,10 +76,11 @@ include("head.php")
     <div class="col-md-6 row">
         <div class="card float-left" style="width: 50%;">
             <div class="card-body">
-                <form class="form-inline mr-auto">
-                  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"><br><br><br>
-                  <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">Search</button>
-                </form> 
+                 <form method="get" action="material.php" class="form-inline mr-auto">
+
+                  <input class="form-control mr-sm-4" type="text" name ="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">Search  </button>
+                </form>
             </div>
         </div>
     </div><br>
