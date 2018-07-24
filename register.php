@@ -3,13 +3,7 @@ include_once 'includes/register.inc.php';
 include_once 'includes/functions.php';
 include("head.php")
 
-if (login_check($mysqli) == true) {
-$logged = 'in';
-} else {
-$logged = 'out';
-}
-?>
-<?php
+
 
 ?>
 <script type="text/JavaScript" src="js/sha512.js"></script>
