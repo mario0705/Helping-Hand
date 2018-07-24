@@ -50,8 +50,7 @@ lib.Save = function(e) {
 	
 	if (lib.Net.Online() || !window.sessionStorage) {
 	
-		// save data online
-		alert("Data has been saved online.\n(But not in this demo!)");
+
 		
 	}
 	else {
@@ -60,7 +59,7 @@ lib.Save = function(e) {
 		$("#mainform input").each(function(i) {
 			window.sessionStorage.setItem(this.id, this.value);
 		});
-		alert("Data has been saved offline.");
+	
 
 	}
 
@@ -72,7 +71,7 @@ lib.Load = function() {
 	if (lib.Net.Online() || !window.sessionStorage) {
 	
 		// load data online
-		alert("Currently online:\ndata could be loaded from server.");
+		
 	
 	}
 	else {
@@ -81,7 +80,7 @@ lib.Load = function() {
 		$("#mainform input").each(function(i) {
 			this.value = window.sessionStorage.getItem(this.id);
 		});
-		alert("Data has been loaded from offline store.");
+	
 
 	}
 

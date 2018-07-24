@@ -172,8 +172,8 @@ echo' <a class="dropdown-item waves-effect waves-light" href="login.php">Login</
 }
 ?>
 <!-- /.Navbar -->
-</header>
+</header><script type="text/javascript" src="jquery-1.4.min.js"></script>
 <script type="text/javascript" src="offline.js"></script>
-<script type="text/javascript" src="jquery-1.4.min.js"></script>
+
 </body>
 </html>
