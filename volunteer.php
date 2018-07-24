@@ -76,6 +76,16 @@ include("head.php")
             </div>
             <!--Grid column-->
            </div> 
+          <center> <div class="col-md-6 col-lg-3 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        
+                  <button class="btn btn-cyan" type="submit" style="cursor: pointer;">Answer questions</button>
+                
+                    </div>
+                </div>
+                <!--/.Card-->
+            </div></center>
 
             <div class="col-md-7 col-lg-12 mb-4">
                 <!--Card-->

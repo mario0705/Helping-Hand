@@ -12,6 +12,10 @@ $logged = 'out';
 
 <html lang="en" manifest="manifest.appCache"><head>
     <title>Helping Hand</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" 
+      type="image/png" 
+      href="assets/image/logo_zlj_icon.ico">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
