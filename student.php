@@ -196,68 +196,51 @@ include("head.php")
     </div>
     <!--Grid column-->
     <!--Grid column-->
-    
-    <!--Grid column-->
-<!-- </div> -->
-<br><br><br><br>
-<!--Grid row-->
- <?php
-
-              $sql = "SELECT id,question,subject,flag,student from question";
+<div class="col-md-7 col-lg-12 mb-4">
+        <div class="card">
+          <div class="header peach-gradient">
+            <div class="row d-flex justify-content-center">
+                <h3 class="white-text mb-0 py-5 font-weight-bold">Your Questions that have been answerd</h3>
+            </div>
+          </div>
+        <div data-spy="scroll" class="scrollspy-example z-depth-1 mt-4" data-target="#navbar-example3" data-offset="0">
+           <?php
+              $name=$_SESSION['student'];
+              $sql1 = "SELECT id,question,subject from question where flag='1' , teamname='$name'";
                 mysqli_select_db($mysqli,'secure_login');
-                $retval = mysqli_query($mysqli,$sql);
+                $retval1 = mysqli_query($mysqli,$sql1);
              
         
 
         ?>
-<div class="row">
-    <div class="col-sm-4 col-lg-3">
-        <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column mt-4">
-            <a class="navbar-brand" href="#">Recent Questions</a>
-            <nav class="nav nav-pills flex-column">
-              <?php 
+           
+           <?php 
+
 
 
 
               $i=1;
 
-                                    while( $i<'6'&& $row =mysqli_fetch_array($retval , MYSQLI_BOTH))
+                                    while($row1 =mysqli_fetch_array($retval1 , MYSQLI_BOTH))
                                     {
-                                    
-                                 echo   "<a class=\"nav-link \" href=\"#item-'$i'\">";
-                                 ?>
-                                 Question&nbsp;<?php echo $i; ?></a>
-                                        
-                                  
-                
-            </nav>
-        </nav>
-    </div>
-    <div class="col-sm-8 col-lg-9">
-        <div data-spy="scroll" class="scrollspy-example z-depth-1 mt-4" data-target="#navbar-example3" data-offset="0">
-           <form action="forum.php" method="get">
-            <input type="hidden" name="id"  value="<?php $id=$row['id'];
-             echo $id; ?>">
-           <?php 
-
-
-
-                                
+                                      $id=$row1['id'];
+                               echo' <form action="forum.php" method="get">
+            <input type="hidden" name="id"  value="'.$id.'">';
                                     
                                  echo '<button type="submit" class="btn btn-flat btn-lg" id="item-';
                                  
                                  echo '">';
                                  
-                                 echo $row['question'];?>
+                                 echo $row1['question'];?>
                                </form>
                                   </button>
                                  <p>By 
                                    <?php 
-                                   echo $row['student'];
+                                   echo $row1['student'];
                                    ?>
                                    
                                     <?php
-                                    $flag=$row['flag'];
+                                    $flag=$row1['flag'];
                                      if ($flag == '1') {
                                       echo " is <b>Answered<b>";
                                       # code...
@@ -268,15 +251,86 @@ include("head.php")
                                      } ?>
                                      of subject
                                      <?php
-                                     echo $row['subject'];
+                                     echo $row1['subject'];
                                      ?>
                                  </p>
                                         
-                                    <?php $i++;} ?>
+                               
                                     <hr>
+                                       <?php $i++;} ?>  
             
         </div>
     </div>
+  </div>
+</div>
+<!--Grid row-->
+ 
+   <div class="col-md-7 col-lg-12 mb-4">
+        <div class="card">
+          <div class="header peach-gradient">
+            <div class="row d-flex justify-content-center">
+                <h3 class="white-text mb-0 py-5 font-weight-bold">Recently Asked</h3>
+            </div>
+          </div>
+        <div data-spy="scroll" class="scrollspy-example z-depth-1 mt-4" data-target="#navbar-example3" data-offset="0">
+           <?php
+
+              $sql1 = "SELECT id,question,subject,flag,student from question";
+                mysqli_select_db($mysqli,'secure_login');
+                $retval1 = mysqli_query($mysqli,$sql1);
+             
+        
+
+        ?>
+           
+           <?php 
+
+
+
+
+              $i=1;
+
+                                    while($row1 =mysqli_fetch_array($retval1 , MYSQLI_BOTH))
+                                    {
+                                      $id=$row1['id'];
+                               echo' <form action="forum.php" method="get">
+            <input type="hidden" name="id"  value="'.$id.'">';
+                                    
+                                 echo '<button type="submit" class="btn btn-flat btn-lg" id="item-';
+                                 
+                                 echo '">';
+                                 
+                                 echo $row1['question'];?>
+                               </form>
+                                  </button>
+                                 <p>By 
+                                   <?php 
+                                   echo $row1['student'];
+                                   ?>
+                                   
+                                    <?php
+                                    $flag=$row1['flag'];
+                                     if ($flag == '1') {
+                                      echo " is <b>Answered<b>";
+                                      # code...
+                                    }
+                                    else {
+                                      echo " is <b>Unanswered</b>"; 
+                                       # code...
+                                     } ?>
+                                     of subject
+                                     <?php
+                                     echo $row1['subject'];
+                                     ?>
+                                 </p>
+                                        
+                               
+                                    <hr>
+                                       <?php $i++;} ?>  
+            
+        </div>
+    </div>
+  </div>
 </div><br><br>
 </main>
 <?php
