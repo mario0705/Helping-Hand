@@ -10,7 +10,7 @@ $logged = 'out';
 }
 ?>
 
-<html lang="en"><head>
+<html lang="en" manifest="manifest.appCache"><head>
     <title>Helping Hand</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <!-- Required meta tags always come first -->
