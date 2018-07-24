@@ -18,9 +18,7 @@ else {
   header('Location: redirect.php');
 }
 ?>
-<?php
 
-?>
 <style type="text/css">
   .form-gradient .header {
   border-top-left-radius: .3rem;
