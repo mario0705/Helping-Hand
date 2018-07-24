@@ -3,19 +3,9 @@ include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
 include("head.php")
 
-if (login_check($mysqli) == true) {
-$logged = 'in';
-} else {
-$logged = 'out';
-}
-$stmt = $mysqli->prepare("SELECT round FROM round WHERE id ='0'");
-$stmt->execute();
-$stmt->bind_result($round);
-$stmt->fetch();
-?>
-<?php
 
 ?>
+
 <!--Main layout-->
 <main>
 <body><form>
