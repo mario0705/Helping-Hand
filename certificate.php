@@ -48,8 +48,8 @@ function myFunction() {
        <br><br>
        <span style="font-size:25px"><b>This is to certify that</b></span>
        <br><br>
-       <span style="font-size:30px"><b><?php echo $name; ?></b></span><br/><br/>
-       <span style="font-size:25px"><i>has completed the required task</i></span> <br/><br/>
+       <span style="font-size:30px"><b>Mr./Ms. <?php echo $name; ?></b></span><br/><br/>
+       <span style="font-size:25px"><i>has successfully completed the task under the supervision of Helping Hand.</i></span> <br/><br/>
        <span style="font-size:30px"><?php echo $jobs; ?></span> <br/><br/><br>
 </div>
 </div>
