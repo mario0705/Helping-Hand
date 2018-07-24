@@ -253,7 +253,7 @@ include("head.php")
                         <?php $i++;} ?>
                     </table>
                 
-                <div class="mask waves-effect waves-light"></div>
+                <!-- <div class="mask waves-effect waves-light"></div> -->
             </a>
         </div>
         
