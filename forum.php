@@ -1,10 +1,11 @@
 <?php
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
-sec_session_start();
-$status=$_SESSION['type'];
+include("head.php")
+
+
 if (login_check($mysqli) == true) {
-if ($status == "ngo") {
+if ($type == "ngo") {
 # code...
 header('Location: redirect.php');
 }
@@ -13,7 +14,7 @@ else {
 # code...
 header('Location: redirect.php');
 }
-if ($status =="volunteer") {
+if ($type =="volunteer") {
 echo " <style>
 #aq{
 display: none;
@@ -23,7 +24,7 @@ display: none;
 }
 ?>
 <?php
-include("head.php")
+
 ?>
 <style type="text/css">
 .form-gradient .header {

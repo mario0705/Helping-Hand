@@ -1,10 +1,11 @@
 <?php
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
-sec_session_start();
-$status=$_SESSION['type'];
+include("head.php")
+
+
 if (login_check($mysqli) == true) {
-  if ($status != "student") {
+  if ($type != "student") {
                      # code...
     header('Location: redirect.php');
                
@@ -18,7 +19,7 @@ else {
 }
 ?>
 <?php
-include("head.php")
+
 ?>
 <style type="text/css">
   .form-gradient .header {

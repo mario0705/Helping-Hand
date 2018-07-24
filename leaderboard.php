@@ -1,7 +1,8 @@
 <?php
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
-sec_session_start();
+include("head.php")
+
 if (login_check($mysqli) == true) {
 $logged = 'in';
 } else {
@@ -14,7 +15,7 @@ $stmt->fetch();
 $stmt->close();
 ?>
 <?php
-include("head.php")
+
 ?>
 <head>
   <meta http-equiv="refresh" content="60">

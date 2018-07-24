@@ -1,7 +1,8 @@
 <?php
 include_once 'includes/register.inc.php';
 include_once 'includes/functions.php';
-sec_session_start();
+include("head.php")
+
 if (login_check($mysqli) == true) {
 $logged = 'in';
 } else {
@@ -9,7 +10,7 @@ $logged = 'out';
 }
 ?>
 <?php
-include("head.php")
+
 ?>
 <script type="text/JavaScript" src="js/sha512.js"></script>
 <script type="text/JavaScript" src="js/forms.js"></script>
