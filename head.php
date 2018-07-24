@@ -3,6 +3,7 @@
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
+error_reporting(0);
 if (login_check($mysqli) == true) {
 $logged = 'in';
 } else {
@@ -10,7 +11,7 @@ $logged = 'out';
 }
 ?>
 
-<html lang="en" manifest="manifest.appCache"><head>
+<html lang="en" manifest="offline.manifest"><head>
     <title>Helping Hand</title>
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="icon" 
@@ -172,5 +173,7 @@ echo' <a class="dropdown-item waves-effect waves-light" href="login.php">Login</
 ?>
 <!-- /.Navbar -->
 </header>
+<script type="text/javascript" src="offline.js"></script>
+<script type="text/javascript" src="jquery-1.4.min.js"></script>
 </body>
 </html>
