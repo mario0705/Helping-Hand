@@ -29,9 +29,6 @@ $status =$_SESSION['type'];
 <?php
 include("head.php")
 ?>
-<!DOCTYPE html>
-<html manifest="offline.manifest">
-
 <script type="text/JavaScript" src="js/sha512.js"></script>
 <script type="text/JavaScript" src="js/forms.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -140,9 +137,6 @@ color: #4f4f4f; }
   
 </div>
 </main>
-<script type="text/javascript" src="offline.js"></script>
-<script type="text/javascript" src="jquery-1.4.min.js"></script>
-</html>
 <?php
 include("foot.php")
 ?>
