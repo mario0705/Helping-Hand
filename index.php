@@ -1,7 +1,7 @@
 <?php
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
-sec_session_start();
+
 if (login_check($mysqli) == true) {
 $logged = 'in';
 } else {
@@ -126,7 +126,8 @@ Helping Hand - The learning application is for students.The application offers c
         <!--/.Card-->
         
     </div>
-    
+    <script type="text/javascript" src="2/jquery-1.4.min.js"></script>
+<script type="text/javascript" src="2/offline.js"></script>
 </main>
 <?php
 include("foot.php")

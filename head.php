@@ -4,7 +4,7 @@ include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
 
-
+sec_session_start();
 if (isset($_SESSION['type'])) {
     # code...
     $type=$_SESSION['type'];

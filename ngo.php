@@ -1,10 +1,12 @@
 <?php
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
-sec_session_start();
-$status=$_SESSION['type'];
+
+include("head.php");
+
+
 if (login_check($mysqli) == true) {
-if ($status != "ngo") {
+if ($type != "ngo") {
 # code...
 header('Location: redirect.php');
 }
@@ -14,9 +16,7 @@ else {
 header('Location: redirect.php');
 }
 ?>
-<?php
-include("head.php")
-?>
+
 <!--Main layout-->
 <main>
     <body>
