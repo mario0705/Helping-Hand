@@ -205,10 +205,12 @@ include("head.php")
           </div>
         <div data-spy="scroll" class="scrollspy-example z-depth-1 mt-4" data-target="#navbar-example3" data-offset="0">
            <?php
-              $name=$_SESSION['student'];
-              $sql1 = "SELECT id,question,subject from question where flag='1' , teamname='$name'";
+              $name=$_SESSION['teamname'];
+              $sql1 = "SELECT id,question,student,subject,flag from question where flag='1' and student='$name'";
                 mysqli_select_db($mysqli,'secure_login');
                 $retval1 = mysqli_query($mysqli,$sql1);
+
+                
              
         
 
@@ -234,21 +236,21 @@ include("head.php")
                                  echo $row1['question'];?>
                                </form>
                                   </button>
-                                 <p>By 
+                                 <p>is answered by 
                                    <?php 
-                                   echo $row1['student'];
+                                   $id=$row1['id'];
+
+                                   $sql2 = "SELECT volunteer from answer where qid='$id'";
+                                       mysqli_select_db($mysqli,'secure_login');
+                                      $retval2 = mysqli_query($mysqli,$sql2);
+                                      $row2=mysqli_fetch_array($retval2 , MYSQLI_BOTH);
+
+                                      echo "<b>";
+                                   echo $row2['volunteer'];
+                                   echo "</b>";
                                    ?>
                                    
-                                    <?php
-                                    $flag=$row1['flag'];
-                                     if ($flag == '1') {
-                                      echo " is <b>Answered<b>";
-                                      # code...
-                                    }
-                                    else {
-                                      echo " is <b>Unanswered</b>"; 
-                                       # code...
-                                     } ?>
+                                    
                                      of subject
                                      <?php
                                      echo $row1['subject'];
