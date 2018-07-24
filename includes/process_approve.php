@@ -24,9 +24,9 @@ if (isset($_POST['id'])){
 	 $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING);
 	// echo $id;
 
-	      $insert_stmt = $mysqli->prepare("UPDATE requests SET flag='2' WHERE id='$id'");
-			$insert_stmt->execute();
-         $insert_stmt->close();
+	  //     $insert_stmt = $mysqli->prepare("UPDATE requests SET flag='2' WHERE id='$id'");
+			// $insert_stmt->execute();
+   //       $insert_stmt->close();
         
 $sql = "SELECT volunteer from requests WHERE id='$id'";
                 mysqli_select_db($mysqli,'secure_login');

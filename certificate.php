@@ -1,8 +1,7 @@
 <?php
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
-include("head.php");
-
+sec_session_start();
 
 $status=$_SESSION['type'];
 if (login_check($mysqli) == true) {
@@ -17,7 +16,7 @@ else {
 }
 ?>
 <?php
-
+include("head.php");
 $name=$_SESSION['volunteer'];
 $jobs=$_SESSION['jobs'];
 ?>
