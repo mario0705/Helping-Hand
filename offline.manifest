@@ -1,22 +1,13 @@
 CACHE MANIFEST
 about_us.php
 foot.php
-forum.php
-head.php
 index.js
 index.php
 instruction.php
 join_us.php
 login.php
-loginerror.php
-logout.php
-material.php
-ngo.php
 offline.js
-redirect.php
 register.php
-student.php
-volunteer.php
 2\1.jpg
 2\100.jpg
 2\2.png
@@ -56,20 +47,6 @@ font\roboto\Roboto-Regular.ttf
 font\roboto\Roboto-Thin.ttf
 font\roboto\Roboto-ThinItalic.ttf
 font\roboto\roboto.css
-includes\db_connect.php
-includes\functions.php
-includes\logout.php
-includes\process_answer.php
-includes\process_approve.php
-includes\process_ask.php
-includes\process_login.php
-includes\process_request.php
-includes\process_select.php
-includes\process_submat.php
-includes\psl-config.php
-includes\register.inc.php
-js\forms.js
-js\forms2.js
-js\forms3.js
-js\sha512.js
+
+
 
