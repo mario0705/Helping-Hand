@@ -154,7 +154,7 @@ include("head.php")
         <!-- Grid column -->
 
         <!-- Grid column -->
-        <div class="col-md-6 col-lg-7">
+        <div class="col-md-6 col-lg-7 mb-4">
 
             <!--Card-->
             <div class="card ">
@@ -191,10 +191,9 @@ include("head.php")
                 background-color: #82B6AD;
                 }
                 </style>
-                <div style="padding-top: 2%;">
-                    <table class=" table table-striped" border="1" style="width: 90%;" align="center">
-                        
-                        <tr >
+                <div style="padding-top: 2%;" class="table-responsive">
+                    <table class=" table table-striped" border="1" style="width: 100%;" align="center">    
+                        <tr>
                             <td class="table-dark">
                                 No.
                             </td>
@@ -274,7 +273,7 @@ include("head.php")
             <!--/.Card-->
 
         </div>
-        <div class="col-md-6 col-lg-7">
+        <div class="col-md-6 col-lg-7 mb-4">
 
             <!--Card-->
             <div class="card ">

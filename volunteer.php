@@ -243,7 +243,7 @@ include("head.php")
                             background-color: #82B6AD;
                             }
                             </style>
-                            <div style="padding-top: 2%;">
+                            <div style="padding-top: 2%;" class="table-responsive">
                                 <table class=" table table-striped" border="1" style="width: 100%;" align="center">
                                     <tr>
                                         <td class="table-dark">
