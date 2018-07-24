@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 
 	// online/offline event handler
 	if (window.sessionStorage) {
+		window.applicationCache.update();
 		lib.Net.ChangeStatus();
 		$(window).bind('online offline', lib.Net.ChangeStatus);
 	}
