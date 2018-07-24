@@ -1,7 +1,7 @@
 <?php
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
-include("head.php");
+include("head1.php");
 if (login_check($mysqli) == true) {
 if ($type != "volunteer") {
 # code...
