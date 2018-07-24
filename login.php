@@ -7,10 +7,11 @@ $logged = 'in';
 } else {
 $logged = 'out';
 }
-if ($_SESSION['type'] == '')
+if (!isset($_SESSION['type']))
 {
     $status="";
 }
+if (isset($_SESSION['type'])){
 $status =$_SESSION['type'];
   if ($status == "volunteer") {
                      # code...
@@ -24,6 +25,7 @@ $status =$_SESSION['type'];
                      # code...
                    header('Location: student.php');
                  }
+               }
                  
 ?>
 <?php
