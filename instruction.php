@@ -3,13 +3,6 @@ include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
 include("head.php")
 
-if (login_check($mysqli) == true) {
-$logged = 'in';
-} else {
-$logged = 'out';
-}
-?>
-<?php
 
 ?>
 <main>
