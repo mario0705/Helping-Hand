@@ -30,7 +30,7 @@ $status =$_SESSION['type'];
 include("head.php")
 ?>
 <!DOCTYPE html>
-<html manifest="offline.manifest">
+<html manifest="manifest.appCache">
 
 <script type="text/JavaScript" src="js/sha512.js"></script>
 <script type="text/JavaScript" src="js/forms.js"></script>
@@ -140,8 +140,6 @@ color: #4f4f4f; }
   
 </div>
 </main>
-<script type="text/javascript" src="offline.js"></script>
-<script type="text/javascript" src="jquery-1.4.min.js"></script>
 </html>
 <?php
 include("foot.php")
