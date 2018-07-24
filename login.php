@@ -1,17 +1,18 @@
 <?php
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
-sec_session_start();
+
 if (login_check($mysqli) == true) {
 $logged = 'in';
 } else {
 $logged = 'out';
 }
-if ($_SESSION['type'] == '')
+if (!isset($_SESSION['type']))
 {
     $status="";
 }
-$status =$_SESSION['type'];
+elseif(isset($_SESSION['type'])){
+  $status =$_SESSION['type'];
   if ($status == "volunteer") {
                      # code...
                    header('Location: volunteer.php');
@@ -24,6 +25,7 @@ $status =$_SESSION['type'];
                      # code...
                    header('Location: student.php');
                  }
+}
                  
 ?>
 <?php
@@ -110,17 +112,7 @@ color: #4f4f4f; }
               <!--Grid column-->
             </div>
             <!--Grid row-->
-            <?php
-            if (login_check($mysqli) == true) {
-            echo '<p class="blue-text">Currently logged ' . $logged . ' as ' . htmlentities($_SESSION['teamname']) . '.  <a class="btn btn-secondary btn-grey waves-effect purple-gradient waves-light ">Continue</a>
-          </p>';
-          
-          echo '<p class="blue-text">Do you want to change user? &nbsp<a class="btn btn-default purple-gradient blue-text btn-grey waves-effect waves-light" href="includes/logout.php">&nbsp Logout &nbsp </a>.</p>';
-          } else {
-          echo '<p class="blue-text">Currently logged ' . $logged . '.</p>';
-          echo '<p class="blue-text">If you don\'t have a login, please <a class="btn purple-gradient btn-default blue-text btn-grey waves-effect waves-light" href="register.php">Register</a>.</p>';
-          }
-          ?>
+            
         </div>
         
         <!--/Form with header-->

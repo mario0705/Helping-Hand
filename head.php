@@ -3,15 +3,30 @@
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
-error_reporting(0);
-if (login_check($mysqli) == true) {
-$logged = 'in';
-} else {
-$logged = 'out';
-}
-?>
 
-<html lang="en" manifest="offline.manifest"><head>
+sec_session_start();
+if (isset($_SESSION['type'])) {
+    # code...
+    $type=$_SESSION['type'];
+    if ($type == "volunteer") {
+        echo "<html lang=\"en\" manifest=\"volunteer.manifest\">";
+    }
+    elseif ($type == "ngo") {
+        echo "<html lang=\"en\" manifest=\"ngo.manifest\">";
+    }
+    elseif ($type == "student") {
+        echo "<html lang=\"en\" manifest=\"student.manifest\">";
+    }
+}
+else {
+    # code...
+    echo "<html lang=\"en\" manifest=\"offline.manifest\">";
+   
+}
+
+
+
+?><head>
     <title>Helping Hand</title>
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="icon" 
@@ -173,7 +188,8 @@ echo' <a class="dropdown-item waves-effect waves-light" href="login.php">Login</
 ?>
 <!-- /.Navbar -->
 </header>
-<script type="text/javascript" src="offline.js"></script>
-<script type="text/javascript" src="jquery-1.4.min.js"></script>
+<script type="text/javascript" src="2/jquery-1.4.min.js"></script>
+<script type="text/javascript" src="2/offline.js"></script>
+
 </body>
 </html>
