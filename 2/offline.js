@@ -1,4 +1,4 @@
-// page loaded
+
 jQuery(document).ready(function($) {
 
 	// form data saving
